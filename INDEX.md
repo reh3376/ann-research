@@ -32,7 +32,7 @@ Hierarchy). The framework name may evolve.
 
 ## What we have decided
 
-Ten decisions to date, all made on 2026-04-28. Grouped by purpose:
+Eleven decisions to date, all made on 2026-04-28. Grouped by purpose:
 
 **Vault & repository foundation (bootstrap)**
 
@@ -77,6 +77,9 @@ Ten decisions to date, all made on 2026-04-28. Grouped by purpose:
   objectives (north star, mid-level capabilities, operational target)
   plus six methodological commitments. Read first by any fresh
   visitor.
+
+**Architectural**
+
 - **`D-2026-04-28-010`** — Hybrid superstructure with LLM as language
   plug-in. **Canonical statement of what this program is building.**
   The architecture is a learning, predicting, world-modeling
@@ -88,6 +91,13 @@ Ten decisions to date, all made on 2026-04-28. Grouped by purpose:
   the LLM's LoRA adapter library based on the teacher's evaluation.
   Inter-LLM communication uses a token-efficient AI2AI protocol.
   Read alongside D-009.
+- **`D-2026-04-28-011`** — V-JEPA family as candidate visual faculty.
+  First specified non-language faculty in the hybrid architecture.
+  Predict-in-representation-space architecture with demonstrated
+  LLM integration, action-conditioning, and open-source availability.
+  Adopted at family level (V-JEPA 2 / 2.1 / successors), for visual
+  modality only. Long-horizon prediction limitation surfaces
+  Q-010 as known gap.
 
 ## What we have ruled out
 
