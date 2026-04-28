@@ -3,8 +3,9 @@
 > **Living document.** Revised at every cycle gate. Git history
 > preserves evolution; the current state is always the working plan.
 >
-> **Last revised:** 2026-04-28 (initial draft)
-> **Next gate:** completion of Cycle 1 → unblock → plan revision
+> **Last revised:** 2026-04-28 (Cycle 1 revised mid-flight; orientation produced)
+> **Current state:** Cycle 1 in `assess` mode pending @reh3376 review of OBS-2026-04-28-003
+> **Next gate:** Cycle 1 `assess → unblock` decision
 
 ---
 
@@ -23,18 +24,14 @@ projection-and-anchoring, recursive predictive horizon, prime
 directives) as open questions. None has stabilized into commitment;
 each will be revisited as evidence accumulates.
 
-**Trace work is asymmetric.** T001 (Monty) has produced two
-mechanism observations (vote topology, matching_step pipeline). T002
-(MDEMG) has not started. This asymmetry is the binding constraint
-on architectural specification work because D-010's Jiminy precedent
-and the AI2AI protocol both depend on T002 evidence we don't yet
-have.
+**Trace work — orientation phase complete.** T001 (Monty) has
+produced two mechanism observations. T002 (MDEMG) has produced
+OBS-2026-04-28-003, the structural orientation map of MDEMG's
+seven major subsystems. T002 has shifted from "not started" to
+"orientation complete; deep traces queued."
 
 **Cycle structure is committed.** T005 codifies how planning and
-work proceed: plan / research / specification / plan / prototyping /
-validation / assess / unblock / plan, iterative, with explicit gates
-between modes. This document is the plan-of-record under that
-structure.
+work proceed.
 
 ---
 
@@ -105,112 +102,118 @@ on a working artifact.
 
 ---
 
-## Active cycle: Cycle 1
+## Active cycle: Cycle 1 (in `assess` mode)
 
-### Focus
+### Original focus and revision
 
-**Bring T002 (MDEMG trace) to first-observation status.** Specifically: produce
-a mechanism-level observation comparable to OBS-2026-04-28-002
-(Monty's matching_step pipeline) covering MDEMG's primary cognitive
-loop — what an ingest cycle does mechanistically, end to end,
-when the system is processing input.
+**Original focus** (drafted in initial plan): Bring T002 (MDEMG trace)
+to first-observation status — produce a mechanism-level observation
+comparable to OBS-2026-04-28-002 (Monty's matching_step pipeline)
+covering MDEMG's primary cognitive loop end-to-end.
 
-### Why this cycle
+**Revision** (mid-cycle, 2026-04-28): The original scope was wrong.
+@reh3376 flagged that MDEMG is over 1M LOC with multiple major
+subsystems — too much surface for one observation to cover at
+mechanism depth. The cycle scope was narrowed to **architectural
+orientation**: produce a structural map of MDEMG's subsystems
+sufficient to scope subsequent deep-trace cycles, without going to
+mechanism depth on any single subsystem.
 
-T002 has been on the open-work list since project bootstrap and
-hasn't started. This is the binding constraint on architectural
-work for two reasons:
+**Cycle 1 method (revised).** Doc-first reading. The MDEMG codebase
+is exceptionally well documented (643 .md files); reading the
+architectural and feature-level documents produces high-bandwidth
+orientation faster than walking @reh3376 through the codebase
+verbally. Method: read VISION.md and the architecture index,
+followed by per-subsystem feature docs (CMS.md, jiminy-inner-voice.md,
+j17-ai2ai-protocol.md, UxTS spec head). Capture as a single
+orientation observation. @reh3376 reviews; cycle assess + unblock
+follows.
 
-1. **D-010's Jiminy precedent depends on T002 evidence.** The
-   teacher-pupil pattern is named as inherited from MDEMG's
-   existing Jiminy/coding-agents structure. We've committed to
-   that pattern as architectural foundation but have no
-   trace-level evidence of how it actually operates. The
-   specification work in Phase B cannot proceed responsibly
-   until we have that evidence.
-2. **The AI2AI protocol is committed as architectural component
-   without specification.** D-010 names MDEMG's existing AI2AI
-   protocol as the leading reference. Until T002 produces a clear
-   picture of what AI2AI carries, how it's structured, and what
-   its compression strategy is, the protocol design for the
-   hybrid architecture cannot begin.
+### Cycle 1 deliverable: OBS-2026-04-28-003
 
-### Mode sequence for Cycle 1
+The orientation observation has been produced. Identified seven
+major subsystems:
 
-This is a **research cycle**. The mode sequence is:
+1. The Multi-Layer Emergent Memory Graph (MEMG) — the substrate
+2. CMS — Conversation Memory System
+3. RSIC — Recursive Self-Improvement Cycle
+4. Jiminy Inner-Voice Service
+5. J17 AI-to-AI Protocol
+6. UxTS — Universal-x Test Specification framework
+7. The LLM Call Layer + Modular Intelligence Plugin Architecture
+
+The artifact captures each subsystem's role, codebase location,
+relationships to other subsystems, and deep-trace candidacy ranking.
+Five questions surfaced. Confidence ratings flagged per claim.
+
+### Cycle 1 mode sequence (revised)
 
 ```
-plan → research → assess → unblock → plan
+plan → plan-revision → research (doc-reading) → assess → unblock → plan
 ```
 
-Specification, prototyping, and validation are not part of this
-cycle. The cycle's job is to produce mechanism-level observations
-that subsequent cycles can specify and prototype against.
+The original mode sequence was `plan → research → assess → unblock
+→ plan`. The plan-revision sub-step is what @reh3376's "MDEMG is
+1M LOC" feedback triggered.
 
-### Cycle 1 method
+### Gate criteria (revised)
 
-This cycle requires asymmetric collaboration that previous T001
-work did not. Specifically:
+**research → assess.** Cycle 1's research-mode gate criterion was:
 
-**@reh3376 leads.** MDEMG is your operational substrate. You have
-end-to-end context I lack. The cycle proceeds by you walking
-through MDEMG's primary loop — the actual code paths, the actual
-data flows, what's load-bearing vs. what's incidental — at a level
-of mechanism detail.
+- One artifact captures MDEMG's structural skeleton at the level
+  of "what does each subsystem do, where does it live, and how do
+  they relate" — sufficient to scope subsequent cycles. ✓ (OBS-003)
+- The seven major subsystems are named and characterized. ✓
+- Cross-subsystem relationships are mapped at high level. ✓
+- A deep-trace candidacy ranking is proposed for Cycles 2..N. ✓
+- Surfaced questions are filed (or noted for filing). 5 noted.
 
-**Claude drafts and surfaces.** As you describe, I capture into
-artifacts. I surface questions where your description leaves
-ambiguity. I produce observation drafts you review. The
-trace-via-conversation mode is heavier collaboration than the
-trace-via-reading mode T001 has used.
+**assess → unblock.** Assessment for Cycle 1 asks (next conversation
+turn):
 
-**Reading happens in support, not in lead.** I can read MDEMG
-source code on the working clone (`/home/claude/mdemg`) to
-ground or verify what you describe. Reading does not lead the
-cycle; your operational walk-through does.
-
-### Gate criteria
-
-**research → assess.** Cycle 1's research mode is complete when:
-
-- One observation artifact captures the MDEMG primary loop at
-  mechanism-level depth, comparable to OBS-2026-04-28-002 in
-  detail and confidence calibration
-- One observation artifact captures the AI2AI protocol's
-  current state (what it carries, how, what it does not carry
-  well)
-- At least 3 questions are surfaced about MDEMG mechanisms
-  whose understanding requires further work
-- Cross-references to D-010, D-011, and T004 questions are
-  in place where evidence bears
-
-**assess → unblock.** Assessment for Cycle 1 asks:
-
-- Did the trace work produce evidence at the level we expected?
+- Did the orientation produce evidence at the level we expected?
   (validation question — execution)
-- Was the mechanism-level abstraction the right depth, or do we
-  need to go shallower or deeper for what comes next? (assess
-  question — design)
-- Where did the trace surface unexpected things — gaps the
+- Was orientation the right mode, or should we have gone deeper
+  on one subsystem instead of broad on all? (assess question —
+  design)
+- Where did the orientation surface unexpected things — gaps the
   architecture must close, or capabilities the architecture can
   inherit?
 
-**unblock.** Unblocking Cycle 1 produces candidate Cycle 2
-focuses. Likely candidates (we'll know after Cycle 1 actually runs):
+Initial findings worth flagging for assess discussion (from
+OBS-003's "Implications" section):
 
-- Cycle 2A: continue T002 — read deeper into Hebbian learning
-  rules, hidden concept abstraction, Jiminy intervention logic
-- Cycle 2B: pivot to specification — the AI2AI protocol message
-  schema, given the trace evidence
-- Cycle 2C: pivot to T001 — finish reading Monty's LM internals
-  (the geometry/dimensionality concrete questions) since
-  parallel evidence streams help T003 synthesis
-- Cycle 2D: pivot to T004 first-principles continuation — the
-  metacognition material @reh3376 has previewed
+- MDEMG is more developed than prior vault artifacts characterized.
+  "R&D substrate" undersells it; "operational system serving as
+  R&D vehicle" is closer.
+- The teacher-pupil pattern in D-010 has direct precedent in Jiminy.
+  The architectural pattern is operational, not aspirational.
+- The AI2AI protocol commitment in D-010 has concrete reference in
+  J17. Specifications can build on J17 rather than invent from
+  scratch.
+- The recursive self-improvement commitment in Q-008 has direct
+  precedent in RSIC.
+- The plugin architecture is the substrate-flexibility commitment in
+  operational form.
+
+### Unblock candidates (for next plan revision after assess)
+
+Likely Cycle 2 focuses, ranked:
+
+- **Cycle 2A: J17 deep trace.** Priority 1 candidate — fills
+  D-010's AI2AI protocol commitment.
+- **Cycle 2B: Jiminy + RSIC combined trace.** Priority 2 — D-010's
+  teacher-pupil pattern in operational form, plus Q-008 precedent.
+- **Cycle 2C: MEMG (graph) deep trace.** Priority 3 — substrate;
+  bears on Q-006 and Q-007.
+- **Cycle 2D: T004 metacognition surfacing.** Priority X (orthogonal)
+  — @reh3376 has previewed this and will surface when ready;
+  conversational, not a research cycle in the trace sense.
+- **Cycle 2E: Continue T001 with Monty's LM internals.** Priority Y
+  (parallel evidence) — would advance T003 synthesis.
 
 The unblock decision happens at the close of Cycle 1, informed by
-what Cycle 1 actually surfaces. The candidates above are the
-*current* projection of likely options, not commitments.
+@reh3376's assess judgment.
 
 ---
 
