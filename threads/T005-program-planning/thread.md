@@ -230,6 +230,42 @@ specification work. See `plan.md` for the cycle definition.
 
 ## Log
 
+### 2026-04-28 — Cycle 1 orientation extended with AGENT_HANDOFF.md
+
+After the orientation deliverable was produced and PR #11 opened,
+@reh3376 added `AGENT_HANDOFF.md` (1025 lines, 132K, top-level) to
+the read list. Read in full and integrated into OBS-2026-04-28-003.
+
+**Cycle hygiene call:** This extends Cycle 1 rather than opens
+Cycle 2. PR #11 had not yet merged; the orientation was still in
+`assess` mode. AGENT_HANDOFF.md is the same kind of source as the
+others (markdown documentation about MDEMG structure). Reading it
+now extends the orientation rather than starting a new cycle. The
+artifact gets revised in the same PR before merge, so the
+orientation is complete when assess closes.
+
+**New material integrated:**
+- Tech stack subsection (Neo4j 5.x, Go 1.24, OpenAI
+  text-embedding-3-large 3072d, gRPC plugins, Python FastAPI sidecar)
+- `internal/` 22-package layout
+- Retrieval pipeline scoring formula with specific weights
+  (vector 0.55 + activation 0.30 + recency 0.10 + confidence 0.05
+  − hub_penalty 0.08 − redundancy 0.12)
+- Phase registry confirmation (105 core ✅, 16 sidecar ✅, 5 cognitive
+  gap ✅)
+- Fine-tuning current state — FT-OAI-001 ✅ MARGINAL verdict,
+  FT-OAI-002 ✅ tooling/telemetry, FT-OAI-003 📋 planned;
+  local LoRA pipeline (PRs #246-250) all complete
+- Architecture-maps-as-self-documentation pattern
+  (`docs/architecture/maps/` auto-generated for Jiminy context)
+
+**Implications added** to OBS-003:
+- LoRA-managed continuous learning is more disciplined than D-010
+  implied (explicit quality gates, cost caps, quality floors,
+  gap-closure framing)
+- MDEMG documents itself for its own use (precedent for entity
+  structural self-knowledge; connects to Q-005 homeostatic boundary)
+
 ### 2026-04-28 — Cycle 1 plan revised mid-flight; orientation produced
 
 **Original Cycle 1 plan:** "Bring T002 (MDEMG trace) to first-
