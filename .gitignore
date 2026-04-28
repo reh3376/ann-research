@@ -27,3 +27,6 @@ Thumbs.db
 *.swp
 *~
 .claude/
+.env
+.env.*
+!.env.example
