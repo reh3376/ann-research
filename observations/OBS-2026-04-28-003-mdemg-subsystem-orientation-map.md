@@ -11,6 +11,7 @@ tags: [mdemg, orientation, architecture, subsystems, jiminy, j17, cms, rsic, uxt
 provenance:
   - "MDEMG repository at github.com/reh3376/mdemg, main branch HEAD 3322c9f (PR #361 merged)"
   - "VISION.md (634 lines, top-level)"
+  - "AGENT_HANDOFF.md (1025 lines, top-level — current development state, phase registry, open work items)"
   - "docs/architecture/00_README.md (documentation index)"
   - "docs/architecture/01_Architecture.md (services, flows, integration modes)"
   - "CMS.md (top-level, 24K)"
@@ -61,6 +62,126 @@ target is **Qwen3.6-35B-A3B MoE** (Apache 2.0, 35B total / 3B active,
 (tier 1 universal: attention + shared expert; tier 2 per-family:
 top-25% routed experts). This work is current as of sprint FT-LORA
 (2026-04-21).
+
+### Tech stack (from AGENT_HANDOFF.md §2)
+
+| Component | Technology |
+|---|---|
+| Graph DB | Neo4j 5.x |
+| Backend | Go 1.24 |
+| gRPC | Protocol Buffers (`api/proto/*.proto`) |
+| Embeddings | OpenAI `text-embedding-3-large` (3072d); vector index at 3072d |
+| Plugins | Binary sidecar via gRPC Unix sockets (`plugins/*/`) |
+| Neural Sidecar | Python FastAPI (`neural/`) — re-ranking + NLI |
+
+### Internal package layout (`internal/`, from AGENT_HANDOFF.md §2)
+
+22 packages, with the load-bearing ones for our orientation:
+
+- `api/` — HTTP handlers + middleware
+- `ape/` — Active Participant Engine + RSIC (covered in subsystem #3)
+- `consulting/` — Agent consulting service (consult, suggest, constraints)
+- `conversation/` — CMS (covered in subsystem #2)
+- `db/` — Neo4j driver + schema validation + migrations
+- `guardrail/` — MCP guardrail validation pipeline
+- `hidden/` — Hidden layer abstraction/consolidation pipeline
+- `jiminy/` — Jiminy inner voice guidance (covered in subsystem #4)
+- `learning/` — Hebbian learning (`CO_ACTIVATED_WITH`)
+- `llmclient/` — Unified LLM client (OpenAI/Ollama)
+- `metalearn/` — Global meta-learning (cross-space promotion)
+- `metrics/` — Prometheus metrics + determinism scoring
+- `plugins/` — Plugin manager + scaffold
+- `retrieval/` — Core retrieval pipeline (vector + activation + scoring + cache)
+- `sanitize/` — Prompt injection sanitization + control char stripping
+- `summarize/` — LLM summary service
+- `symbols/` — Symbol extraction (tree-sitter)
+- `transfer/` — Space transfer (export/import)
+
+Plus `pkg/mdemg/` (public API types for external Go consumers) and
+`neural/training/` (Python LoRA pipeline).
+
+### Retrieval pipeline scoring formula (from AGENT_HANDOFF.md §2)
+
+The actual scoring weights:
+
+```
+score = vector(0.55) + activation(0.30) + recency(0.10) + confidence(0.05)
+      - hub_penalty(0.08) - redundancy(0.12)
+```
+
+This is the canonical retrieval scoring; the score is computed
+per candidate after vector recall, symbol search, bounded expansion
+(max depth=3), and spreading activation. Output goes through the
+TTL-LRU cache before returning.
+
+### Phase registry (from AGENT_HANDOFF.md §4)
+
+The README's "all 7 phases complete" claim is confirmed and refined:
+
+- **105 core phases** (numbered 31..105 with sub-phases) — all ✅
+- **16 sidecar phases** (S0..S16) — all ✅
+- **5 cognitive gap phases** (101..105) — all ✅ (gaps closed)
+
+The sub-phase structure is detailed in AGENT_HANDOFF.md §4. Notable
+patterns: phase 45 (Modular Intelligence) split into 45.1-45.5 with
+45.3 cancelled (parser RPC researched, deemed bad idea); phase 47
+(Incremental Updates) wired APE INGEST via StartScheduledSync; phase
+46-PR (Dynamic Pipeline Registry) is the mechanism for automatic
+layer promotion triggers; phase 80 is CMS Meta-Cognition.
+
+### Fine-tuning state (from AGENT_HANDOFF.md §5, current 2026-04-21)
+
+The FT-LORA sprint state, since this is operationally active and
+relevant to D-010's LoRA-managed continuous-learning commitment:
+
+**Local LoRA pipeline** (PRs #246-250, all complete):
+- Phase 1: LLM Interaction Logger (TSDB writer + scrubber + quality
+  pipeline + data CLI; 16 consumers labeled via `WithContext()`)
+- Phase 2: Think Mode + Response Sanitization (`StripThinkBlock +
+  StripCodeFence`, 11 call sites)
+- Phase 3: vllm-mlx Integration
+- Phase 4+: SFT/GRPO/DPO local-LoRA training
+
+**Hosted OpenAI fine-tuning track** (FT-OAI):
+- **FT-OAI-001 ✅ complete (2026-04-21)** — first production fine-tune
+  on `gpt-4.1-mini`. Result: +0.032 mean cosine, 7.8:1 W/L, parse-pass
+  preserved at 0.973. **Verdict: MARGINAL.** Cross-base bench against
+  `gpt-5.4-mini` showed Δ=−0.034. Strategic read: closed ~48% of the
+  stock-4.1-mini → stock-5.4-mini gap (0.832 → 0.864 → 0.898; 0.0319
+  of 0.0658). Deploy on hold pending per-token cost ratio analysis.
+- **FT-OAI-002 ✅ complete (2026-04-21)** — pure tooling + telemetry +
+  investigation hardening. E1-E9 epics; E3 (cap-symmetric baseline
+  re-eval) + E8 (10-record integration smoke) staged pending
+  live-spend authorization. No re-train; FT-OAI-001's 0.864 stands.
+- **FT-OAI-003 📋 planned** — north-star sprint to close the remaining
+  ~52% of the gap, target `FT(cheap-base) ≈ prod(gpt-5.4-mini)` at
+  the cheap base's inference cost. 10 epics + rollback. Cost cap
+  ≤$250. Quality floor ≥0.8322.
+
+This is significant for our architectural work because it shows the
+**LoRA-managed continuous-learning surface (D-010 commitment)
+operating in production**, with explicit quality gates, cost caps,
+and rollback plans. The pattern is more disciplined than D-010
+implied; specifications can adopt FT-OAI's gating discipline as a
+reference.
+
+### Architecture maps for Jiminy context injection
+
+A pattern worth flagging: `docs/architecture/maps/` contains 10
+compact architecture maps that are **auto-generated** by
+`scripts/generate_arch_maps.py` (with `--checksum`, `--dry-run`,
+`--force` modes). These maps are then consumed by Jiminy as
+context injection — meaning the system documents itself for its
+own use. UITS optimization protection (`metadata.optimized: true`)
+prevents the generator from overwriting maps that have been
+manually converged.
+
+This is directly relevant to D-010's superstructure: the entity
+having structural self-knowledge that's machine-readable and
+machine-maintained. Worth cross-referencing in future architectural
+specification work.
+
+---
 
 ## The seven major components
 
@@ -493,6 +614,12 @@ These belong in deep-trace cycles, one subsystem at a time.
 | UxTS's 4-layer architecture and 12-framework count | 4 | UxTS portable agent spec read at head only; the 12-framework count is from the developer guide reference. |
 | LLM call layer's no-tool-calling policy and 16 call sites | 5 | Direct from VISION.md operational architecture section. |
 | The plugin architecture's three types and gRPC-over-Unix-socket transport | 5 | Direct from 01_Architecture.md. |
+| Tech stack specifics (Neo4j 5.x, Go 1.24, embedding model + 3072d) | 5 | Direct from AGENT_HANDOFF.md §2. |
+| `internal/` 22-package layout | 5 | Direct from AGENT_HANDOFF.md §2. |
+| Retrieval pipeline scoring formula (specific weights) | 5 | Direct from AGENT_HANDOFF.md §2. |
+| 105 core phases / 16 sidecar phases / 5 cognitive gap phases all complete | 5 | Direct from AGENT_HANDOFF.md §1 and §4. |
+| Fine-tuning state (FT-OAI-001/002 complete, FT-OAI-003 planned, with specific deltas) | 5 | Direct from AGENT_HANDOFF.md §5 (current as of 2026-04-21). |
+| Architecture-maps-as-self-documentation pattern | 4 | Direct from AGENT_HANDOFF.md §5; the architectural significance for our work is my inference. |
 | Cross-subsystem relationships in the relationship graph | 4 | Inferred from the documents' cross-references; a direct verification would require reading code paths. |
 
 ## Surfaced questions (filed separately as Q-artifacts in subsequent PR)
@@ -603,6 +730,28 @@ the LLM as a called-out faculty (16 invocation sites, no tool
 calling, single-shot calls, structured outputs). The Qwen fine-tuning
 pipeline is the LoRA-managed continuous-learning surface D-010
 committed to. The inversion is not aspirational; it's operational.
+
+**The LoRA-managed continuous learning surface (D-010 commitment)
+is more disciplined than D-010 implied.** AGENT_HANDOFF.md §5 reveals
+the FT-OAI-001/002/003 sprint structure: explicit quality gates
+(MARGINAL verdict on 4.1-mini fine-tune), cost caps (≤$250 for
+FT-OAI-003), quality floors (≥0.8322 cross-base), strategic
+gap-closure framing (the FT(cheap-base) ≈ prod(prod-base) north
+star). Future architectural specification of the LoRA adapter
+management interface should adopt this gating discipline as a
+reference pattern. The eventual entity's continuous learning will
+need similar quality/cost gates.
+
+**MDEMG documents itself for its own use.** The
+`docs/architecture/maps/` pattern — 10 compact architecture maps
+auto-generated by `scripts/generate_arch_maps.py` and consumed by
+Jiminy as context injection — is a precedent for the eventual
+entity having structural self-knowledge that's machine-readable
+and machine-maintained. UITS optimization protection prevents the
+generator from overwriting manually-converged maps. This connects
+to T004's homeostatic-boundary framing (Q-005): the entity needs
+to know what it is in order to maintain itself; auto-generated
+self-description is one mechanism for that.
 
 ## What this artifact does for Cycle 1
 
