@@ -11,94 +11,93 @@
 
 ## Where we are
 
-**Architectural commitments are firm.** D-009 (program objectives),
-D-010 (hybrid architecture: superstructure + LLM language plug-in,
-teacher-pupil dynamic, AI2AI protocol, LoRA-managed continuous
-learning), and D-011 (V-JEPA family as candidate visual faculty)
-form the architectural foundation. The pattern is: superstructure
-orchestrates faculty-as-foundation-model.
+**Architectural commitments are firm but may be revised.** D-009
+(program objectives), D-010 (hybrid superstructure: LLM language
+plug-in, teacher-pupil dynamic, AI2AI protocol, LoRA-managed
+continuous learning), and D-011 (V-JEPA family as candidate visual
+faculty) form the current architectural foundation. **D-010 and
+D-011 may be revised once T006 produces an architectural
+specification** — the hybrid superstructure pattern in D-010 may
+be a deployment shape over the architecture rather than the
+architecture itself. Until T006 has a specification, D-009/D-010/
+D-011 stand.
 
 **First-principles framing is captured.** T004 holds five facets
 (homeostatic boundary, dimensional minimum-commitment,
 projection-and-anchoring, recursive predictive horizon, prime
-directives) as open questions. None has stabilized into commitment;
-each will be revisited as evidence accumulates.
+directives) as open questions. T006 reads these as positive-space
+inputs to its "what it must have" mode.
 
-**Trace work — orientation phase complete.** T001 (Monty) has
-produced two mechanism observations. T002 (MDEMG) has produced
-OBS-2026-04-28-003, the structural orientation map of MDEMG's
-seven major subsystems. T002 has shifted from "not started" to
-"orientation complete; deep traces queued."
+**Trace work — orientation phase complete; subordinated to T006.**
+T001 (Monty) has produced two mechanism observations. T002 (MDEMG)
+has produced OBS-003 (current state) and OBS-004 (forward
+direction). Trace cycles 2A-2F (J17 deep, Jiminy+RSIC combined,
+MEMG deep, file questions, T004 surfacing, continue Monty) are
+subordinated to T006: they run when T006's work needs their
+evidence, not on their own cadence.
+
+**T006 (Architectural Innovation) is the central thread.** Opened
+2026-04-28 with explicit working-method declaration: Roger provides
+the novelty; Claude is a sharpening stone. T006's plan.md owns
+the program's strategic phasing (Phase A: Architectural Innovation
+Development; Phase B: Communication and Resource Acquisition;
+Phase C: Build with Team and Funding). Cycle 1 of T006 is in plan
+mode with focus 2B ("what it must have").
 
 **Cycle structure is committed.** T005 codifies how planning and
-work proceed.
+work proceed across all threads.
 
 ---
 
 ## Strategic priorities (the long view)
 
-The program advances through three phases, in this order:
+**Strategic phasing now lives in T006's plan.md.** T006 was opened
+on 2026-04-28 as the central thread for the program's architectural
+work, with explicit working-method declaration (Roger provides the
+novelty; Claude is a sharpening stone). T006's plan.md owns the
+three-phase structure (Phase A: Architectural Innovation
+Development; Phase B: Communication and Resource Acquisition; Phase
+C: Build with Team and Funding).
 
-### Phase A — Evidence base for architecture
+T005's role under this revised structure is:
 
-Bring trace work in T001 and T002 to mechanism-level depth. Surface
-the gaps between current substrates (MDEMG, Monty) and what the
-hybrid architecture (D-010, D-011) requires. Produce a clear-eyed
-account of what each substrate provides, what each does not, and
-what the architecture inherits versus what it must build.
+- **Schedule cycles across the program**, including T006's cycles.
+- **Track cycle bookkeeping** (which cycle is active, what mode,
+  what gate criteria, when to assess and unblock).
+- **Surface methodology questions** that bear on multiple threads.
+- **Maintain the cycle methodology itself** (the
+  plan/research/specification/prototyping/validation/assess/unblock
+  loop).
 
-This phase is dominated by **research mode**. Specification work
-happens opportunistically — for components whose mechanism is
-already understood (LLM faculty interfaces, V-JEPA integration
-patterns from published work). Prototyping is sparse in this phase;
-mostly tiny prototypes that surface specific specification gaps.
+T005 no longer owns the strategic phasing. T006 does. This is a
+deliberate split: T005 is the meta-thread (how we work); T006 is
+the substantive thread for the program's central architectural
+work (what we work on).
 
-Phase A ends when: T001 has read into LM internals (where
-geometry/dimensionality questions become concrete), T002 has
-mechanism observations covering at least the ingest-retrieve cycle
-and the AI2AI protocol, and the substrate-flexibility implications
-(Q-006, Q-007) are answerable from evidence rather than principle.
+### Trace cycles 2A-2F: re-sequenced under T006
 
-### Phase B — Architectural specification
+The trace cycles previously named in T005's cycle queue (J17 deep
+trace, Jiminy+RSIC combined trace, MEMG deep trace, file surfaced
+questions, T004 metacognition surfacing, continue T001) are now
+**subordinated to T006 in Phase A**. They run when T006's
+positive-space, negative-space, candidate-architecture, or
+mathematical work needs their evidence — not on their own
+cadence.
 
-Refine D-010 and D-011 into buildable component specifications.
-Define the superstructure's subsystems (state management, world
-model, reference frames, predictive horizon, evaluation, governance).
-Define the AI2AI protocol's message schema. Define the LoRA adapter
-management interface. Define how the visual faculty (V-JEPA)
-integrates with the superstructure.
+This is a substantive re-sequencing. Earlier in the program the
+trace work was front-of-program; under the new framing, the
+architectural innovation is front-of-program and trace work is
+back-of-program (it produces evidence that informs the
+architecture's specification, but it is not the central work).
 
-This phase is dominated by **specification mode**. Research
-continues to surface gaps. Prototyping increases — small components
-get built to validate specifications before they're finalized.
+### D-010 and D-011 may need revision once T006 has a specification
 
-Phase B ends when: the architecture has buildable specifications
-for the subsystems whose first prototypes are next. Not all
-subsystems need full specification at once; some can stay at
-high-level commitment while others descend to detail.
-
-### Phase C — First end-to-end prototype
-
-Build the smallest meaningful slice that exercises the architecture
-end-to-end: input through faculty, faculty output through
-superstructure governance, superstructure decision back through
-faculty as guidance, output to user. This is the milestone proving
-the pattern works.
-
-This phase is dominated by **prototyping and validation modes**.
-The prototype is not the final system; it's the first end-to-end
-check that the architecture is buildable.
-
-Phase C ends when: a functioning end-to-end prototype demonstrates
-the teacher-pupil dynamic on a constrained task, with measurements
-captured. Assessment of that demonstration determines what cycles
-follow.
-
-After Phase C, the cycle structure continues — there is no Phase D.
-Each subsequent cycle extends the prototype, refines the
-specifications, or addresses gaps surfaced by validation. The
-phase distinction stops mattering once the program is iterating
-on a working artifact.
+D-010 (hybrid superstructure) was committed before T006 existed.
+Its framing as "the architecture" may be revised to "a deployment
+shape over the architecture" once T006's specification is
+produced. D-011 (V-JEPA visual faculty) similarly depends on the
+eventual architecture. Until T006's specification exists, both
+stand. After, both may be revised.
 
 ---
 
