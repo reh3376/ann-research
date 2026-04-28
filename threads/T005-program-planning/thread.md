@@ -230,6 +230,44 @@ specification work. See `plan.md` for the cycle definition.
 
 ## Log
 
+### 2026-04-28 — Cycle 1 plan revised mid-flight; orientation produced
+
+**Original Cycle 1 plan:** "Bring T002 (MDEMG trace) to first-
+observation status — produce a mechanism-level observation comparable
+to OBS-2026-04-28-002 covering MDEMG's primary cognitive loop."
+
+**Revision trigger:** @reh3376 noted MDEMG is over 1M LOC with
+multiple major subsystems (graph base, UxTS, Jiminy, J17, CMS, RSIC,
+plus the LLM call layer). The original mechanism-depth-on-primary-
+loop scope was wrong for this size — would have produced a shallow
+tour of subsystems without depth on any.
+
+**Revised Cycle 1 scope:** Architectural orientation only. Produce a
+structural map of MDEMG's subsystems, sufficient to scope subsequent
+deep-trace cycles. Do not go to mechanism depth on any subsystem.
+
+**Method change:** Doc-first reading, not @reh3376-led walk-through.
+The MDEMG codebase is exceptionally well-documented (643 .md files,
+covering all subsystems at multiple levels). Reading the
+architectural and feature-level documents produced high-bandwidth
+orientation faster than verbal walk-through would have. @reh3376
+flagged this directly: "the mdemg codebase is very well documented,
+it will probably be much quicker for you to find and review the .md
+files relevant to each of those main topics."
+
+**Deliverable produced:** OBS-2026-04-28-003 (MDEMG subsystem
+orientation map). Identifies seven major subsystems, characterizes
+each, maps their relationships, surfaces five questions, ranks
+deep-trace candidacy. Cycle 1 now in `assess` mode pending @reh3376
+review.
+
+**Methodology validation noted:** This is the first plan revision
+recorded under the cycle methodology. The plan-revision-mid-flight
+worked as designed: scope-was-wrong was caught and corrected without
+abandoning the cycle, the revised scope was achievable in the same
+working session, and the deliverable now exists. The cycle
+methodology survives its first contact with reality.
+
 ### 2026-04-28 — thread opened, cycle structure codified
 
 Conversation post-PR-#9-merge converged on a planning methodology:
