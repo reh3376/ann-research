@@ -1,0 +1,29 @@
+# Compiled binary
+/bin/
+
+# Go
+*.exe
+*.test
+*.out
+vendor/
+
+# Python sidecar
+sidecar/.venv/
+sidecar/__pycache__/
+sidecar/**/__pycache__/
+sidecar/.ruff_cache/
+sidecar/.pytest_cache/
+sidecar/dist/
+sidecar/build/
+sidecar/*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*~
+.claude/

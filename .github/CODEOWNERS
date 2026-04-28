@@ -1,0 +1,4 @@
+# Every file in this repository requires review by @reh3376.
+# Combined with branch protection ("Require review from Code Owners"),
+# this is the lock that makes @reh3376 the final approver on all PRs.
+* @reh3376
