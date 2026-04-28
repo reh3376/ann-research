@@ -86,17 +86,23 @@ Nine decisions to date, all made on 2026-04-28. Grouped by purpose:
 
 ## What we are investigating
 
-Three active research threads:
+Four active research threads:
 
 | ID | Status | Current question |
 |---|---|---|
 | **`T001-monty-trace`** | active | What does a single Monty episode actually do, mechanistically, from observation through motor action? |
 | **`T002-mdemg-trace`** | active | What does an MDEMG ingest+retrieve cycle actually do, mechanistically? |
 | **`T003-grounding-question`** | active | What does it mean for a symbolic substrate to have a "where am I" signal of the kind proprioception provides Monty? |
+| **`T004-entity-first-principles`** | active | What is the minimal first-principles framing of what kind of entity this program is designing — from the entity's own perspective, before it has any models of self or world? |
 
 `T001` and `T002` are mostly trace work that proceeds through reading and
 reporting. `T003` is synthesis work that depends on the trace threads
-and on theoretical reading.
+and on theoretical reading. `T004` is conversational surfacing followed
+by deliberate capture; it is the internal-facing complement to `D-009`'s
+external-facing objectives. T004 currently holds five open questions
+(`Q-005` through `Q-009`) covering homeostatic boundary, dimensional
+commitment, projection-and-anchoring, recursive prediction-horizon
+expansion, and prime directives.
 
 ## Open questions
 
