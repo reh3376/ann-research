@@ -230,6 +230,68 @@ specification work. See `plan.md` for the cycle definition.
 
 ## Log
 
+### 2026-04-28 — T006 (Architectural Innovation) opened; trace cycles 2A-2F subordinated
+
+After PR #11 merged, @reh3376 named the central architectural
+problem explicitly:
+
+> *"The transformer was the fuse. The ANN architecture that we
+> are proposing is the fuel that propagates the intelligence
+> explosion. We will need a team, we will need funding, and we
+> will need to get this idea infront of people with the resources
+> to allow us to build it."*
+
+Followed by the working-method commitment:
+
+> *"You are a sharpening stone for me to hone my blade with. You
+> are my faithful assistant in this process. I will provide the
+> novelty as we work thru this. What it is not, what it must
+> have, what it could be, the mathematics necessary to prove it
+> in theory."*
+
+This re-orients the program substantially. T006 was opened as the
+central thread for the architectural work. Strategic phasing
+(previously in T005's plan.md as Phase A: Evidence base; Phase B:
+Architectural specification; Phase C: First end-to-end prototype)
+moved to T006's plan.md and was reshaped:
+
+- **Phase A — Architectural Innovation Development** (T006 cycles
+  producing the specification)
+- **Phase B — Communication and Resource Acquisition** (papers,
+  talks, pitch documents)
+- **Phase C — Build with Team and Funding** (out of scope for
+  current planning)
+
+Trace cycles 2A-2F as previously named in T005's cycle queue (J17
+deep trace, Jiminy+RSIC combined trace, MEMG deep trace, file
+surfaced questions, T004 metacognition surfacing, continue T001)
+are subordinated to T006 in Phase A. They run when T006's work
+needs their evidence, not on their own cadence. This is a
+substantive re-sequencing — the trace work was front-of-program
+under the prior framing; under the new framing, the architectural
+innovation is front-of-program and trace work is back-of-program.
+
+T006 Cycle 1 opens with focus 2B ("what it must have") —
+populating the positive space of substrate properties the
+architecture must support. The four substrate-level commitments
+from OBS-2026-04-28-004 §2.7 plus the five T004 facets (Q-005
+through Q-009) are initial inputs.
+
+D-010 and D-011 may need revision once T006 produces a
+specification. Until then they stand. This is recorded explicitly
+in T005's plan.md ("Where we are") and T006's plan.md ("Strategic
+phasing").
+
+The 10 surfaced questions from OBS-003 and OBS-004 remain queued
+for filing. Light-touch work that can run between T006 cycles or
+defer until they become load-bearing for a specific T006 cycle.
+@reh3376 directs filing timing.
+
+T005's role under this revised structure narrows: schedule cycles
+across all threads, track cycle bookkeeping, surface methodology
+questions, maintain the cycle methodology itself. T005 no longer
+owns strategic phasing. T006 does.
+
 ### 2026-04-28 — Cycle 1 produces second observation (OBS-004) on MDEMG forward direction
 
 After OBS-003 (current state) reached substantial depth, @reh3376
