@@ -11,8 +11,9 @@ tags: [monty, tbp, trace, mechanism]
 provenance:
   - "tbp.monty repository: https://github.com/thousandbrainsproject/tbp.monty"
   - "conversation 2026-04-28 between @reh3376 and Claude"
+  - "D-2026-04-28-005 (trace target choice)"
 owner: "Claude (drafts), @reh3376 (review)"
-current_question: "What does a single Monty episode actually do, mechanistically, from observation through motor action?"
+current_question: "What does each LM compute and emit during one matching_step in the five_lm_no_threading config, and what does each LM do with received votes on the next step?"
 ---
 
 # Thread T001 — Monty Trace
@@ -33,63 +34,106 @@ of LMs?" without having to re-read the source.
 
 ## Current question
 
-What does a single Monty episode actually do, mechanistically, from
-observation through motor action? Specifically:
+What does each LM compute and emit during one `matching_step` in the
+`five_lm_no_threading` config (see `D-2026-04-28-005`), and what does
+each LM do with received votes on the next step?
 
-1. Pick one benchmark experiment as the trace subject (likely something
-   small from `benchmarks/` — exact choice TBD).
-2. For one observation step in that experiment, document:
-   - The raw observation entering the sensor module
-   - What the SM computes and emits to the LM(s)
-   - What `matching_step` does inside the LM (especially the
-     `_update_evidence` math)
-   - What `send_out_vote` produces (vote contents, scaling, threshold)
-   - What `receive_votes` does to the receiving LMs' evidence
-   - What the GoalGenerator decides and emits
-   - What action the motor system executes
-   - What the next observation looks like and how it differs from the
-     first
+The first version of this question was broader ("what does an episode
+do, end to end"). Narrowing to a single step gives the trace a
+tractable target. Once one step is traced cleanly, expand to the next
+step, then to multi-step patterns.
 
 ## Method
 
-Read-and-write loop:
+**Read-until-ambiguous, then run-and-instrument selectively.**
 
-1. Pick the benchmark.
-2. Run it in an environment we control (likely a local Monty install)
-   and instrument the loop to log enough state to reconstruct the trace
-   from logs.
-3. For each step of the trace, write **observations** (atomic, dated,
-   sourced) into the vault. Each observation carries provenance back
-   to specific source files and line numbers.
-4. As patterns emerge, write **questions** for things we don't
-   understand and **hypotheses** for things we tentatively conclude.
-5. When the trace is complete enough to answer the current question,
-   move thread status to `complete` and update `T003` with what we
-   learned.
+1. **Read pass.** Follow the source code path that processes a single
+   observation through one `matching_step` in the chosen config:
+   - `MontyBase.step()` (entry)
+   - `MontyBase._matching_step()` and `aggregate_sensory_inputs()`
+   - `EvidenceGraphLM.matching_step()` and `_update_evidence`
+   - `EvidenceGraphLM.send_out_vote()`
+   - `MontyBase._vote()` → `EvidenceGraphLM.receive_votes()` →
+     `_update_evidence_with_vote`
+   - `EvidenceGoalGenerator.step()` and `_generate_goal()`
+   - `MotorSystem.step()` (or whatever the chosen motor policy uses)
+
+2. **Document each step as observations.** One observation per
+   mechanically distinct step. Each carries provenance to specific
+   source file + line range. Confidence rated honestly: a 5 means I
+   read the code and it does the thing I said it does; a 3 means I
+   inferred from context and could be wrong.
+
+3. **When ambiguous, run and instrument.** "Ambiguous" means: source
+   reading cannot determine what a piece of code does without seeing
+   actual values, OR the documented behavior conflicts with what the
+   code appears to do, OR there is a specific runtime behavior (like
+   evidence value scaling) that depends on data and can't be predicted
+   from code alone. The fallback is to install Monty locally, run the
+   chosen config, and capture the actual state. This is authorized by
+   `D-2026-04-28-005` and does not need a separate decision.
+
+4. **Write hypotheses for things the trace tentatively concludes.**
+   Trace findings that aren't certain become hypotheses with explicit
+   falsification criteria.
+
+5. **Write questions for things the trace surfaces but can't answer.**
+   Particularly: questions whose answers would require running the code
+   or that point at the substrate-level concerns of `T003`.
 
 ## State
 
-**Initial state.** No trace work has begun. The `tbp.monty` repository
-has been cloned and structurally surveyed (class hierarchies, file
-layout, overall architecture) but no episode has been traced and no
-mechanism-level understanding has been produced yet. The structural
-survey is documented in `DE-2026-04-28-001` as the explicit failure
-mode that motivated this thread.
+**Current.**
+
+- Trace target chosen (`D-2026-04-28-005`): the
+  `five_lm_no_threading.yaml` config, 5 LMs, fully connected vote
+  matrix, deterministic, bounded.
+- One structural observation recorded (`OBS-2026-04-28-001`): the
+  vote topology and how `_vote()` orchestrates send/receive.
+- No mechanism-level trace work has begun yet. Next step is to read
+  `MontyBase.step()` and write the first mechanism observation.
+
+**Open assumption** worth flagging (will become a question or
+observation as the trace progresses): the chosen config presumes that
+the test configs in `tbp.monty/main` are runnable without missing
+dependencies or environment-specific shims. If running becomes
+necessary and the test config doesn't run cleanly, the read-only path
+becomes more load-bearing.
 
 ## Open work
 
-- [ ] Stand up a local Monty install (uv, follow the project's UV_PROTOTYPE.md)
-- [ ] Pick the benchmark experiment for the trace
-- [ ] Decide on instrumentation strategy (loggers? interactive notebook?)
-- [ ] First trace pass: one observation, one step
+- [ ] Read `MontyBase.step()` and `_matching_step()`. Write
+      `OBS-2026-04-28-NNN` covering what the orchestrator does on a
+      single step.
+- [ ] Read sensor module pipeline (`sensor_modules.py:CameraSM`,
+      `ObservationProcessor`). Write observation covering what comes
+      out of an SM in this config.
+- [ ] Read `EvidenceGraphLM.matching_step` and trace `_update_evidence`.
+      This is where 3D geometry questions (`Q-2026-04-28-001`) will
+      surface.
+- [ ] After the first three observations, decide whether reading is
+      sufficient or whether we need to run-and-instrument.
 
 ## Artifacts produced by this thread
 
-*None yet.*
+- `D-2026-04-28-005` — trace target choice
+- `OBS-2026-04-28-001` — 5-LM vote topology (structural setup)
 
 ## Log
 
-### 2026-04-28
+### 2026-04-28 — trace target chosen
+
+Read the experiment configs in `src/tbp/monty/conf/experiment/` and
+the connectivity configs in `src/tbp/monty/conf/monty/connectivity/`.
+Selected `five_lm_no_threading.yaml` as the first trace target;
+documented in `D-2026-04-28-005`. Recorded one structural observation
+about the vote topology (`OBS-2026-04-28-001`).
+
+Next step: read `MontyBase.step()` and produce the first
+mechanism-level observation. This will probably also be the first PR
+that produces "real trace content" rather than scope-setting.
+
+### 2026-04-28 — thread created
 
 Thread created as part of bootstrap. Motivated by Roger's redirect
 ("develop a deep understanding before attempting to make any changes")
