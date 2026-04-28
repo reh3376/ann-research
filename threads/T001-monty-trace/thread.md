@@ -88,10 +88,21 @@ step, then to multi-step patterns.
 - Trace target chosen (`D-2026-04-28-005`): the
   `five_lm_no_threading.yaml` config, 5 LMs, fully connected vote
   matrix, deterministic, bounded.
-- One structural observation recorded (`OBS-2026-04-28-001`): the
-  vote topology and how `_vote()` orchestrates send/receive.
-- No mechanism-level trace work has begun yet. Next step is to read
-  `MontyBase.step()` and write the first mechanism observation.
+- Structural observation recorded (`OBS-2026-04-28-001`): the vote
+  topology and how `_vote()` orchestrates send/receive.
+- **First mechanism observation recorded (`OBS-2026-04-28-002`):
+  the matching_step pipeline as a six-phase orchestrator sequence,
+  with the substantive properties (voting only in matching steps;
+  `lm_to_lm_matrix=null` in our config means votes are the only
+  inter-LM channel; the binary `use_state` gate).** One question
+  surfaced (`Q-2026-04-28-004`) about why the motor system receives
+  only `sensor_module_outputs[0]` rather than all SM outputs.
+
+The trace is now inside the orchestrator at the level of "what does
+each phase delegate to." The next layer down is what the SMs and LMs
+actually do when invoked. Confidence in current mechanism
+understanding: high for orchestrator (literally read), unknown for
+SM/LM internals (not yet read).
 
 **Open assumption** worth flagging (will become a question or
 observation as the trace progresses): the chosen config presumes that
@@ -102,24 +113,50 @@ becomes more load-bearing.
 
 ## Open work
 
-- [ ] Read `MontyBase.step()` and `_matching_step()`. Write
-      `OBS-2026-04-28-NNN` covering what the orchestrator does on a
-      single step.
+- [x] Read `MontyBase.step()` and `_matching_step()`. Wrote
+      `OBS-2026-04-28-002` (matching_step pipeline). Surfaced
+      `Q-2026-04-28-004` (motor system / single-SM question).
 - [ ] Read sensor module pipeline (`sensor_modules.py:CameraSM`,
       `ObservationProcessor`). Write observation covering what comes
-      out of an SM in this config.
+      out of an SM in this config — i.e., what's actually inside a
+      `sensor_module_outputs[i]` element after `sm.step()`.
 - [ ] Read `EvidenceGraphLM.matching_step` and trace `_update_evidence`.
       This is where 3D geometry questions (`Q-2026-04-28-001`) will
       surface.
-- [ ] After the first three observations, decide whether reading is
-      sufficient or whether we need to run-and-instrument.
+- [ ] Read motor system + active motor policy. Answers
+      `Q-2026-04-28-004`.
+- [ ] After the first three mechanism observations, decide whether
+      reading is sufficient or whether we need to run-and-instrument.
 
 ## Artifacts produced by this thread
 
 - `D-2026-04-28-005` — trace target choice
 - `OBS-2026-04-28-001` — 5-LM vote topology (structural setup)
+- `OBS-2026-04-28-002` — matching_step pipeline (first mechanism)
+- `Q-2026-04-28-004` — motor system / single-SM question
 
 ## Log
+
+### 2026-04-28 — first mechanism observation
+
+Read `MontyBase.step`, `Monty._matching_step`, `aggregate_sensory_inputs`,
+`_step_learning_modules`, `_collect_inputs_to_lm`, `_combine_inputs`,
+`_pass_goals`, `_step_motor_system`, `_set_step_type_and_check_if_done`.
+
+Wrote `OBS-2026-04-28-002` documenting the six-phase matching_step
+pipeline with confidence-flagged properties: voting only in matching
+steps; `lm_to_lm_matrix=null` in our config makes votes the sole
+inter-LM channel; the `use_state` gate is binary, not weighted.
+
+Surfaced `Q-2026-04-28-004` while reading `_step_motor_system`: the
+motor system receives only `sensor_module_outputs[0]`, not all SM
+outputs. Worth understanding before drawing conclusions about how
+"where am I" is grounded.
+
+Next step: read sensor_modules.py to understand what's inside
+`sensor_module_outputs[i]`. After that, drop down into
+`EvidenceGraphLM.matching_step` — that's where the geometry questions
+(`Q-2026-04-28-001`) will start to bear on the trace.
 
 ### 2026-04-28 — trace target chosen
 
