@@ -107,7 +107,7 @@ Eleven decisions to date, all made on 2026-04-28. Grouped by purpose:
 
 ## What we are investigating
 
-Four active research threads:
+Five active research threads:
 
 | ID | Status | Current question |
 |---|---|---|
@@ -115,6 +115,7 @@ Four active research threads:
 | **`T002-mdemg-trace`** | active | What does an MDEMG ingest+retrieve cycle actually do, mechanistically? |
 | **`T003-grounding-question`** | active | What does it mean for a symbolic substrate to have a "where am I" signal of the kind proprioception provides Monty? |
 | **`T004-entity-first-principles`** | active | What is the minimal first-principles framing of what kind of entity this program is designing — from the entity's own perspective, before it has any models of self or world? |
+| **`T005-program-planning`** | active | What is the next cycle's focus, what mode are we in, and what does it take to reach the next unblock gate? |
 
 `T001` and `T002` are mostly trace work that proceeds through reading and
 reporting. `T003` is synthesis work that depends on the trace threads
@@ -123,7 +124,11 @@ by deliberate capture; it is the internal-facing complement to `D-009`'s
 external-facing objectives. T004 currently holds five open questions
 (`Q-005` through `Q-009`) covering homeostatic boundary, dimensional
 commitment, projection-and-anchoring, recursive prediction-horizon
-expansion, and prime directives.
+expansion, and prime directives. **`T005` schedules the work that flows
+through the other threads** via iterative cycles
+(plan→research→specification→plan→prototyping→validation→assess→unblock→plan).
+The plan-of-record lives at `threads/T005-program-planning/plan.md` and
+is revised at every cycle gate.
 
 ## Open questions
 
