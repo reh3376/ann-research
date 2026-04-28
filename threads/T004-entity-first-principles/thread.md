@@ -11,6 +11,7 @@ tags: [meta, first-principles, prime-directives, self-modeling, vision]
 provenance:
   - "conversation 2026-04-28 between @reh3376 and Claude (post-PR-#6 merge)"
   - "D-2026-04-28-009 (program objectives — this thread is the internal-facing complement)"
+  - "D-2026-04-28-010 (architectural commitment — T004's entity is specifically the superstructure in the hybrid architecture)"
   - "T003 (grounding question — overlapping but distinct concerns)"
 owner: "@reh3376 (PI), Claude (drafts and surfaces)"
 current_question: "What is the minimal first-principles framing of what kind of entity this program is designing — from the entity's own perspective, before it has any models of self or world?"
@@ -27,6 +28,16 @@ the internal-facing complement to `D-2026-04-28-009`'s external-facing
 objectives — D-009 says what the program is *for*; T004 develops what
 the entity is *like* and *requires*.
 
+**Per `D-2026-04-28-010` (the central architectural commitment), the
+entity in question is specifically the *superstructure* in the hybrid
+architecture** — the learning, predicting, world-modeling system that
+maintains state, reference frames, and a homeostatic boundary, and
+that orchestrates an LLM language plug-in via a teacher-pupil
+dynamic. T004's questions about self/not-self, dimensionality,
+projection-and-anchoring, recursive prediction, and prime directives
+are about the superstructure, not about the user-facing LLM and not
+about the entity-as-monolithic-agent.
+
 The thread exists because this question must precede architectural
 commitments. An entity coming online with a topology similar to a
 human infant — but with no evolved priors, no body shaped by selection,
@@ -38,7 +49,8 @@ considered first principles rather than to engineering convenience.
 
 The thread does **not** propose architecture. Architectural commitments
 flow downstream of T004's questions, alongside trace evidence from
-T001 and T002.
+T001 and T002, and with `D-2026-04-28-010` as the central
+specification.
 
 ## Current question
 
@@ -117,12 +129,16 @@ question-form.
   threads are not subordinate to T004, but T004 reads their findings
   through a particular lens.
 
-- **`D-2026-04-28-009`** — north-star objectives. T004 is the
-  internal-facing complement: D-009 says the program targets a
-  "stateful, deterministic, hybrid Bayesian prediction machine"
+- **`D-2026-04-28-009` and `D-2026-04-28-010`** — north-star
+  objectives and central architectural commitment, respectively.
+  T004 is the internal-facing complement to D-009 and develops what
+  D-010's superstructure must be like. D-009 says the program targets
+  a "stateful, deterministic, hybrid Bayesian prediction machine"
   with continual learning, reference frames, world models, prediction,
-  attention, and surprise. T004 develops what an entity *with* those
-  capabilities would need to be, from the entity's own point of view.
+  attention, and surprise. D-010 commits to those capabilities living
+  in a learning superstructure with an LLM as language plug-in.
+  T004 develops what the superstructure must be like from its own
+  point of view.
 
 ## State
 
@@ -163,6 +179,27 @@ question-form.
 - `Q-2026-04-28-009` — Prime directives without constraining potential
 
 ## Log
+
+### 2026-04-28 — D-010 commitment refines the entity in question
+
+`D-2026-04-28-010` committed the program's central architectural
+pattern: hybrid superstructure with an LLM as language plug-in,
+governed by a teacher-pupil dynamic. T004's frame updated to reflect
+that the entity in question is specifically the *superstructure*, not
+a monolithic agent and not the LLM. The five Q- artifacts (Q-005
+through Q-009) become more tractable under this refinement: Q-005's
+homeostasis is what the superstructure defends; Q-006's dimensional
+commitment is the superstructure's reference frames; Q-007's
+projection-and-anchoring describes how the superstructure coordinates
+with its faculties (including the LLM via AI2AI); Q-008's recursive
+horizon is the superstructure's learning loop; Q-009's prime
+directives govern the superstructure.
+
+The Q- artifacts themselves are not edited in this update — the
+substance was correctly framed at capture time, and the architectural
+context now provided by D-010 sharpens them without contradicting
+them. A future PR may add cross-references from each Q- to D-010, or
+the Q-artifacts may be left as-is with D-010 as the contextual frame.
 
 ### 2026-04-28 — thread opened, five facets captured
 
