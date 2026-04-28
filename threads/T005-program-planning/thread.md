@@ -230,6 +230,54 @@ specification work. See `plan.md` for the cycle definition.
 
 ## Log
 
+### 2026-04-28 — Cycle 1 orientation extended again with five additional reads
+
+@reh3376 added six files to the read list. Five existed and were
+read; one (`docs/mdemg_sprint_ideas/`) does not exist in the repo
+(verified: no directory by that name; `docs/development/ft-lora/`
+and `docs/development/ft-oai/` contain sprint-plan files but the
+named path is not present). Question to @reh3376 surfaced for
+clarification.
+
+**Files read and integrated into OBS-003:**
+
+- `README.md` (29K) — benchmark methodology (whk-wms 507K LOC TS,
+  120 questions, +5.2% vs baseline, -51% variance), key-features
+  list including "Capability gap detection"
+- `docs/features/j17-ai2ai-protocol.md` sections 4-8 (previously
+  only 1-3.1) — full self-improvement journey, ProtocolHealth
+  formula, reflection patterns, mutation actions, NLI scoring,
+  JSONL training data
+- `docs/features/j17-prompt-compression.md` (4.2K, full) — J17-PC
+  applied to inputs of 5 LLM callers, 25-35% aggregate reduction
+- `docs/features/neural-training-pipeline.md` (19K) — three
+  training workstreams (cross-encoder/generative/embedding), 9-step
+  generative LoRA pipeline with quality gates, 100× cross-encoder
+  speedup
+- `docs/features/rsic-feedback-loop.md` (12K) — closed-loop AR-1,
+  reversible vs irreversible actions, **DH-005 health-weighting
+  formula** (substantial finding)
+
+**Key new findings extending OBS-003:**
+
+- J17's current state (5.2× compression, 91% comprehension) is the
+  result of four documented RSIC cycles, not initial design. The
+  documented lesson — "better codes within a weak protocol hit a
+  ceiling; the protocol itself must evolve" — is the recursive
+  predictive horizon expansion principle in operational form.
+- DH-005's `overall_health = Σ(w_i · c_i · s_i) / Σ(w_i · c_i)`
+  excludes dimensions with zero confidence rather than penalizing
+  them. The formula is *honest about what it doesn't know*. This
+  is reference architecture for the entity's homeostatic boundary
+  (Q-005) — the self-model can use the same data-sufficiency-aware
+  aggregation.
+- J17-PC compresses LLM *inputs*, not just outgoing AI2AI guidance.
+  Per-caller opt-in. Prose-only with code/JSON/enums verbatim.
+- Three training workstreams more developed than the AGENT_HANDOFF
+  excerpt suggested. Generative LoRA has 9 explicit steps with
+  multiple quality gates. Reference architecture for the entity's
+  continuous learning.
+
 ### 2026-04-28 — Cycle 1 orientation extended with AGENT_HANDOFF.md
 
 After the orientation deliverable was produced and PR #11 opened,
