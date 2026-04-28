@@ -32,7 +32,7 @@ Hierarchy). The framework name may evolve.
 
 ## What we have decided
 
-Nine decisions to date, all made on 2026-04-28. Grouped by purpose:
+Ten decisions to date, all made on 2026-04-28. Grouped by purpose:
 
 **Vault & repository foundation (bootstrap)**
 
@@ -77,6 +77,17 @@ Nine decisions to date, all made on 2026-04-28. Grouped by purpose:
   objectives (north star, mid-level capabilities, operational target)
   plus six methodological commitments. Read first by any fresh
   visitor.
+- **`D-2026-04-28-010`** — Hybrid superstructure with LLM as language
+  plug-in. **Canonical statement of what this program is building.**
+  The architecture is a learning, predicting, world-modeling
+  superstructure with an LLM as one of its faculties (specifically
+  the language faculty). The superstructure is the cognitive core,
+  the seat of self, the locus of continual learning. The relationship
+  between superstructure and LLM is teacher-pupil — default
+  non-intervention, override when warranted, continuous training of
+  the LLM's LoRA adapter library based on the teacher's evaluation.
+  Inter-LLM communication uses a token-efficient AI2AI protocol.
+  Read alongside D-009.
 
 ## What we have ruled out
 
