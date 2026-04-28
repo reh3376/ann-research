@@ -230,6 +230,89 @@ specification work. See `plan.md` for the cycle definition.
 
 ## Log
 
+### 2026-04-28 — Cycle 1 produces second observation (OBS-004) on MDEMG forward direction
+
+After OBS-003 (current state) reached substantial depth, @reh3376
+clarified that the previously-missing `mdemg_sprint_ideas`
+directory is at `docs/research/mdemg_sprint_ideas/` (existing
+locally but not pushed to the public mdemg repo) and uploaded
+all 13 markdown files directly. The corpus is substantively
+different from current-state docs — it is forward-looking
+architectural research.
+
+**Cycle hygiene call:** Per the cycle methodology, this is a
+distinct subject matter from OBS-003. Rather than continuing to
+extend OBS-003 (already 994 lines, growing unwieldy), produced
+**OBS-2026-04-28-004 as a companion observation**. OBS-003 = what
+MDEMG is today; OBS-004 = what MDEMG plans to become next. Both
+are part of Cycle 1's orientation deliverable.
+
+**Files read:**
+
+Strategic:
+- `mdemg-specification.md` (155K, 1328 lines) — the master document
+  framing MDEMG as R&D vehicle with successor framework on the
+  horizon. §0.2 strategic frame, §2 alignment assessment, §3 fork-
+  timing, §7 open questions, §8 successor framework foundational
+  document.
+- `risk-opp-04232026-01.md` (24K) — sprint planning input
+  (Executive Summary read; 9 risks + 9 opportunities surveyed).
+
+Sprints (forward-looking architecture):
+- `01-pc-reframe-and-surprise-routing.md` (33K) — Theoretical
+  Foundation read; identifies DH-005 as precision-weighted Bayesian
+  / PC framing.
+- `02-precision-weighted-hebbian-eta.md` (17K) — framing + key
+  changes read.
+- `03-top-down-predictions-and-promotion.md` (18K) — framing +
+  schema read; identified as highest-risk PC/FEP sprint.
+- `04-column-voting-retrieval.md` (15K) — full read (uploaded).
+- `05-context-specific-node-activations.md` (15K) — full read
+  (uploaded).
+- `06-sparse-retrieval-activation.md` (11K) — full read (uploaded).
+- `07-ff-shallow-heads.md` (14K) — full read (uploaded).
+- `08-htm-sequence-memory.md` (12K) — full read (uploaded).
+- `09-active-inference-unification.md` (13K) — full read (uploaded).
+
+Reference:
+- `MDEMG_FT_LORA_PACKAGING_SPEC.md` (17K) — head read; identifies
+  Qwen3-14B FP4 dense as the base model.
+- `lora-training-glossary.md` (54K) — head read; vocabulary
+  reference, not architectural.
+
+**Key findings captured in OBS-004:**
+
+1. **MDEMG is explicitly framed as R&D vehicle, not production
+   target.** The successor framework is a separate artifact, not
+   a future MDEMG version. This re-orients our program's
+   relationship to MDEMG.
+
+2. **D-010's hybrid superstructure aligns directly with the
+   successor framework.** Five of seven carry-forward patterns map
+   to D-010 components; the four substrate-level commitments
+   (§2.7) map to our D-009 mid-level capability targets exactly.
+
+3. **DH-005 is precision-weighted Bayesian / hierarchical PC, not
+   just data-sufficiency-aware.** Sprint 01 sharpens OBS-003's
+   identification. Mathematical framing is more load-bearing.
+
+4. **Vocabulary drift risks named explicitly.** Emergence,
+   reference frames, recursive self-improvement — MDEMG terms
+   that overlap with long-term-goal terms in misleading ways. Our
+   vault must be careful.
+
+5. **Fork-timing creates operational sequencing for our work.** At
+   3-of-5 fork-indicators green, the specification recommends
+   drafting the successor's foundational document in parallel.
+   Currently estimated weeks to 3-of-5.
+
+**Five new questions surfaced** (Q-011 through Q-015), to be filed
+as Q-artifacts in a follow-up PR or in Cycle 2 unblock.
+
+**One candidate new cycle surfaced:** read the
+`mdemg-white-paper-review.md` referenced by all nine sprint plans
+but not in the corpus uploaded.
+
 ### 2026-04-28 — Cycle 1 orientation extended again with five additional reads
 
 @reh3376 added six files to the read list. Five existed and were
