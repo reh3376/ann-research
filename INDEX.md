@@ -4,26 +4,37 @@
 > It is the working-memory entry point and is rewritten periodically as
 > understanding evolves.
 >
-> Last reviewed: **2026-04-28** (initial bootstrap)
+> Last reviewed: **2026-04-28** (post-PR-#5)
 
 ---
 
 ## What we are working on
 
-The research program is to develop a deep, mechanism-level understanding
-of two systems — **Monty** (the Thousand Brains Project's sensorimotor
-learning system, implementing cortical column theory) and **MDEMG**
-(an operational graph-based cognitive substrate for AI coding agents) —
-and from that understanding, determine whether and how their architectural
-commitments can inform the design of novel ANN topologies for continual,
-reference-frame-adaptive intelligence.
+> **Canonical statement:** [`D-2026-04-28-009`](decisions/D-2026-04-28-009-program-objectives-and-research-strategy.md)
+> records the program's primary objectives and research strategy in
+> three layers (north star, mid-level capabilities, operational
+> target) plus six methodological commitments. Read that artifact for
+> the full framing; the paragraph below is the one-paragraph summary.
+
+The research program is to develop novel artificial neural network
+topologies that more closely mimic neocortical computation than current
+transformer-based systems, with the long-term aim of architectures
+capable of artificial general intelligence. The operational target is
+a stateful, deterministic, hybrid Bayesian prediction machine
+supporting continual learning, reference-frame adaptation, world-model
+construction, and attention-modulated prediction. The method is
+**deep mechanism-first understanding** of MDEMG (operational substrate)
+and `tbp.monty` (canonical Thousand Brains Theory implementation)
+before any integration proposal.
 
 The current proposed framework name is **AHH** (Adaptive Hebbian
 Hierarchy). The framework name may evolve.
 
 ## What we have decided
 
-Four bootstrap decisions, all made on 2026-04-28:
+Nine decisions to date, all made on 2026-04-28. Grouped by purpose:
+
+**Vault & repository foundation (bootstrap)**
 
 - **`D-2026-04-28-001`** — Vault substrate is markdown + YAML frontmatter,
   one artifact per file, six artifact types, in git.
@@ -33,6 +44,39 @@ Four bootstrap decisions, all made on 2026-04-28:
   contributions; `@reh3376` admin bypass; CODEOWNERS = `@reh3376`.
 - **`D-2026-04-28-004`** — Working agreement: no integration / interop /
   mapping work until `T001` and `T002` are complete.
+
+**Research strategy**
+
+- **`D-2026-04-28-005`** — Trace target: `five_lm_no_threading.yaml`
+  config in `tbp.monty` (5 LMs, fully connected vote matrix,
+  deterministic, bounded). Read-until-ambiguous methodology with
+  run-and-instrument as authorized fallback.
+
+**Workflow operationalization**
+
+- **`D-2026-04-28-006`** — Assistant direct push via fine-grained
+  scoped GitHub token (`Contents:rw`, `Pull requests:rw`,
+  `Metadata:r`); replaces the originally-assumed patch-and-apply
+  mechanism in D-003.
+- **`D-2026-04-28-007`** — Every assistant-authored PR gets an
+  activity summary comment posted after creation. Captures
+  trajectory the PR description doesn't (sources, granularity
+  decisions, confidence calibration, things considered and
+  rejected).
+- **`D-2026-04-28-008`** — Merges via admin bypass rather than
+  approval-then-merge, because GitHub's platform-level
+  "PR-author-can't-approve" rule prevents the approval workflow when
+  the assistant operates under `@reh3376`'s identity. Substantive
+  control (Roger reads each PR before merging) is preserved as
+  behavioral commitment.
+
+**Strategic**
+
+- **`D-2026-04-28-009`** — Program objectives and research strategy.
+  **Canonical statement of what this program is for.** Three-layer
+  objectives (north star, mid-level capabilities, operational target)
+  plus six methodological commitments. Read first by any fresh
+  visitor.
 
 ## What we have ruled out
 
