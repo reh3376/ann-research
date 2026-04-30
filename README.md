@@ -306,7 +306,7 @@ applied with discipline. Substantial work remains.
 
 If you are working on similar questions — continuous learning, world
 models, reference frames, recursive self-improvement at the substrate
-level — Roger Henley would welcome the conversation. Reach out via the
+level — I would welcome the conversation. Reach out via the
 contact information on https://github.com/reh3376.
 
 ---
