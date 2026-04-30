@@ -219,6 +219,100 @@ there is only the work of articulating what the new system must be.
 
 ## Log
 
+### 2026-04-28 — Cycle 1 triage continued: item 10 added (recursive composability) + Q-011 filed + item 1 clarified
+
+During item 1's settled state, @reh3376 surfaced a structural
+claim that didn't fit the existing nine items: **ANN topologies
+nest, and their composition matters architecturally.** The
+clarification began as a refinement of item 1's input-wirings
+definition (a topology's outputs can be another topology's
+inputs) and grew into a recognition that **recursive
+composability is its own substrate-level commitment** that
+threads through all the must-haves.
+
+**Settled in this triage:**
+
+- **Recursive composability is a must-have** for functional
+  viability. The architecture must compose with itself; without
+  it, the framework cannot move beyond single-level topology
+  scope.
+- **Pattern at every level** (Q-T006-I resolution): items 1-N
+  are properties of the architectural pattern, and the pattern
+  recurs at every level of the nesting. The architecture is
+  self-similar in the strict sense — the same pattern appears
+  at every scale.
+- **Cross-cutting concern + numbered must-have (Choice 3)**:
+  recursive composability is filed as item 10 (gets its own
+  property statement, logical grounding eventually, mathematics
+  eventually) AND tagged as cross-cutting (each subsequent
+  must-have, when triaged, must address how recursion interacts
+  with its content).
+- **N-level nesting**: the recursion is not bounded at two
+  levels. Topologies nest indefinitely. The Hawkins
+  cortical-column framing already in item 1 generalizes — the
+  architecture *is* the column-equivalent, instantiated
+  recursively.
+- **Item 1 clarified**: input-wirings paragraph extended to
+  name inter-topology wiring as a special case ("Input streams
+  may be sensory data from the external world or the outputs
+  of other topologies; the framework treats both uniformly.
+  Inter-topology wiring is the mechanism by which the
+  architecture composes with itself recursively (see item 10).")
+- **Max dimensionality** flagged as a hard constraint that
+  applies uniformly to the pattern, with individual topologies
+  in the nesting potentially sitting below the ceiling. To be
+  sharpened when item 6 reaches triage.
+- **New mathematics required**: @reh3376 has flagged that
+  capitalizing on the nesting concept will require new
+  mathematics not yet developed. Deferred to T006's mathematics
+  mode.
+
+**Knowledge → skills hypothesis filed as Q-2026-04-28-011 (Q-T006-K
+resolution).** @reh3376's framing — *"I have a strong intuition
+that knowledge builds skills is fundamental to the viable
+framework, but it remains to be tested to be proven"* — was
+sharpened against the working method's distinction between
+must-have property statements and research hypotheses. Result:
+filed as Q-011 with explicit framing as a *strong-prior research
+hypothesis*. This is the program's first formally-filed
+strong-prior hypothesis; the pattern (file as Q-artifact, track
+prior confidence, evidence accumulates over cycles, promote or
+revise based on evidence) is precedent for future similar claims.
+Item 10's property statement does **not** commit to the
+hypothesis as part of its content; item 10 commits to
+*capability* (recursive composition) and references Q-011 as the
+leading hypothesis about what the recursion *produces*.
+
+**New questions surfaced:**
+
+- **Q-T006-I:** What is "the architecture" — single instance,
+  pattern, or pattern-at-every-level? **Resolved:** pattern at
+  every level.
+- **Q-T006-J:** Where does recursive composability live —
+  separate item, absorbed, or split? **Resolved:** Choice 3
+  (own item + cross-cutting concern).
+- **Q-T006-K:** Knowledge → skills — must-have / hypothesis /
+  weak / strong / file separately? **Resolved:** filed as Q-011
+  (strong-prior research hypothesis).
+- **Q-T006-L (new, deferred):** What is the relationship between
+  item 10's recursion and item 1's path-dependence-on-input-
+  wirings claim? Path-dependence at one level cascades into
+  path-dependence at higher levels; implications need formal
+  treatment when mathematics mode is reached.
+
+**Implication for items 2-9 triage:** each subsequent must-have,
+when sharpened, must address how recursive composability (item
+10) interacts with its content. This adds depth to each triage
+but produces sharper artifacts. Specifically named in plan.md:
+
+- Item 2: one generative model that nests, one per level, or both?
+- Item 3: reference frames at one level become inputs at the next;
+  construction must accommodate (already flagged by @reh3376 as
+  integral)
+- Item 4: is meta-learning recursive — can the architecture
+  meta-learn its meta-learning rules at higher levels?
+- Items 5-9: each may have its own interaction with recursion
+
 ### 2026-04-28 — Cycle 1 triage: item 1 sharpened
 
 Cycle 1 entered research mode via triage workflow. Each candidate
