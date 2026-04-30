@@ -219,6 +219,131 @@ there is only the work of articulating what the new system must be.
 
 ## Log
 
+### 2026-04-30 — Cycle 1 triage continued: item 2 sharpened + Q-012 filed + D-010 clarification
+
+**Item 2 sharpened from "Generative modeling / prediction"
+placeholder into "Generative modeling: hybrid α+β with
+action-conditioning, per-level + unifying superstructure."** Five
+turns of conversation produced the property statement now in
+plan.md. Item 2's content inherited substantial constraints from
+items 1 and 10 (already merged); the sharpening produced
+substantively richer commitments than the OBS-004 §2.7 placeholder.
+
+**Settled in this triage:**
+
+- **Hybrid α+β commitment.** The architecture is *both*
+  probabilistic (maintains distributions; surprise has precise
+  mathematical meaning) AND forward-simulating (generates
+  trajectories; can imagine forward concretely). Most existing
+  architectures commit to one or the other (Reading X confirmed):
+  predictive coding and active inference commit to α; JEPA and
+  most world-model architectures commit to β. The coherent
+  integration of α and β is itself part of the architecture's
+  novelty; existing literature does not supply it.
+- **Composition: per-level generative models AND unifying
+  superstructure** (Option C). Each level of the recursive
+  nesting has its own generative model; a unifying superstructure
+  composes them across levels. The architecture is modularly
+  composable AND systematically integrated.
+- **What is predicted: external observations + internal state,
+  action-conditioned.** The architecture predicts what input will
+  come next AND its own internal state, with both kinds of
+  prediction *action-conditioned* — predictions depend on the
+  actions the architecture considers. The architecture is
+  agentive, not a passive observer.
+- **Predictions operate over reference frames.** Mathematics is
+  the worked example: the architecture builds reference frames
+  for mathematical structures through item 1's growth dynamics;
+  the frames build on each other recursively (item 10); higher
+  frames enable predictions about how a system will function
+  based on a mathematical representation.
+- **Heterogeneity of frames required.** The architecture must
+  support many kinds of reference frames (physical-spatial,
+  mathematical, causal-chain, social, linguistic, others) for
+  general intelligence. Generality of frame-type is itself a
+  property the architecture must have.
+- **Cross-cutting interaction with item 10 explicitly answered.**
+  Generativity recurs at every level (per-level models); the
+  superstructure provides cross-level integration. The
+  architecture is generatively self-similar.
+
+**Superstructure clarification settled.** The word "superstructure"
+in this vault is a **type** of architectural element — an overall
+controlling mechanism — not a singular proper noun. Multiple
+superstructures may exist at different architectural levels over
+different content. D-010's "hybrid superstructure"
+(deployment-level orchestration) and item 2's integrating
+superstructure (generative-model composition) are different
+instances of the same architectural pattern. D-010 received a
+small clarifying note (added to its Context section) explicitly
+recognizing this; D-010's commitments stand unchanged.
+
+**Q-2026-04-30-012 filed.** @reh3376's framing during item 2
+discussion — *"a strong definition of general intelligence would
+allow the answer to these questions to be reliably predicted"* —
+is the closest the program has come to defining what general
+intelligence means. Filed as Q-012 with the seed answer:
+*general intelligence is the property that enables reliable
+prediction across heterogeneous prediction domains.* Three
+sub-questions held open for sharpening: (1) what counts as a
+"prediction domain"; (2) what counts as "reliable" prediction;
+(3) is intelligence the *enabling property* or *constitutive of*
+reliable prediction. This is the program's working definition
+under refinement; may graduate to a decision artifact when
+phrasing stabilizes.
+
+**Methodological pattern reinforced** (from earlier item 1
+discussion): @reh3376's framing — *"as we build these structures
+we will 'learn' what is needed and we will be able to sharpen
+these action definitions"* — is the working method's research
+mode applied at the cycle scale. Item 2 commits at the
+property-statement level; further sharpening happens through
+construction work in later cycles. The four open Q-T006-M/N/O/P
+questions are not gaps in item 2's content; they are
+specifications-to-be-discovered through the building process.
+
+**New questions surfaced (deferred to subsequent cycles or to
+construction work):**
+
+- **Q-T006-M:** What constitutes an *action* in the architecture's
+  commitment? Bodily, epistemic, inferential, or all three? Math
+  example points strongly toward inferential at minimum.
+- **Q-T006-N:** Is action *selection* part of item 2 or a separate
+  architectural element?
+- **Q-T006-O:** Is the action repertoire learned or fixed?
+- **Q-T006-P:** What is the principled relationship between α and
+  β within the architecture — when is each used, how is consistency
+  maintained? Lies at the heart of the integration claim. Mathematics
+  mode work.
+
+**Resolved during item 2 triage (now closed, not filed as
+separate Q-artifacts since they were sharpening prompts within
+the conversation):**
+
+- Generative meaning: α+β hybrid (γ reconstructive not committed).
+- Reading X (most architectures fail because they commit to
+  α XOR β; integration is the novelty) vs Reading Y (deeper novelty
+  beyond combining): Reading X confirmed as actionable
+  interpretation.
+- Composition shape: Option C (per-level + unifying superstructure).
+- Action-conditioning status: yes, committed.
+- Forward-vs-backward temporal direction: deferred to item 7
+  (Q-007) when triaged.
+- Definition-of-general-intelligence destination: Q-012 (question,
+  not yet decision).
+
+**Tentative absorption status update.** Item 6 (Dimensional
+minimum-commitment) remains tentatively absorbed into item 1, with
+@reh3376's max-dimensionality-as-uniform-ceiling clarification noted.
+Confirmation when item 6 reaches triage.
+
+**Items 3-9 status:** pending triage. Triage proceeds one item at
+a time. Item 3 (Reference-frame construction) has substantial
+inherited content from items 1, 2, and 10 — frames are built
+through growth (item 1), recursively composable (item 10), and
+must be predictable-over (item 2). Mathematics example provides a
+worked case.
+
 ### 2026-04-28 — Cycle 1 triage continued: item 10 added (recursive composability) + Q-011 filed + item 1 clarified
 
 During item 1's settled state, @reh3376 surfaced a structural

@@ -210,22 +210,161 @@ is fixed at design time do not satisfy this commitment.
   equivalent or capacity-recruitment-equivalent at the
   implementation level?
 
-### Items 2-9 — Pending triage
+### Item 2 — Generative modeling: hybrid α+β with action-conditioning, per-level + unifying superstructure
 
-Items 2-9 below remain placeholders awaiting triage. Each will
-move through the same workflow item 1 just did: Roger sharpens;
-Claude pushes back; the item gets revised, absorbed, dropped,
-split, or deferred; the result is committed. Triage proceeds
-one item at a time.
+**Status:** sharpened (2026-04-30). Property statement, current
+cycle. Logical grounding deferred to subsequent cycles. Mathematics
+deferred further (and explicitly noted by @reh3376 as requiring
+new mathematics, particularly to capture the coherent integration
+of probabilistic and forward-simulation generative properties
+across the recursion).
 
-The four from OBS-004 §2.7:
+The architecture **is a generative model** — but specifying what
+that means requires three commitments, each substantively more
+demanding than current architectures supply.
 
-2. **Generative modeling / prediction.** The substrate must
-   produce predictions about current state and future state. A
-   storage-and-retrieval substrate (the MDEMG ceiling) is not
-   sufficient. *(Co-specifies prediction-and-surprise dynamic
-   with item 1; substrate-property side here, mechanism in item
-   1.)*
+**Hybrid α+β: probabilistic AND forward-simulating.** The
+architecture is *both* probabilistic (maintains distributions
+over states and observations; surprise has precise mathematical
+meaning as the negative log probability the model assigned to
+what actually happened) AND forward-simulating (generates
+trajectories — given current state, can roll forward concrete
+sequences without needing to compute probabilities everywhere).
+Most existing architectures commit to one or the other.
+Predictive coding and active inference commit to α (probabilistic);
+JEPA and most world-model architectures commit to β
+(forward-simulating). Each alone is insufficient for general
+intelligence. **The integration of α and β is one of the places
+where the architecture's novelty lives** — α and β must be
+combined coherently within the architecture, with a principled
+relationship between when the architecture uses probabilistic
+inference and when it uses forward simulation, between when a
+simulation is sampled from a distribution and when it is computed
+deterministically. The coherent integration is itself part of the
+architectural innovation; existing literature does not supply it.
+
+**Composition: per-level generative models AND a unifying
+superstructure.** Each level of the recursive nesting (item 10)
+has its own generative model. The superstructure here is not the
+same instance as D-010's deployment-level superstructure; both
+are instances of the same architectural pattern. *Superstructure*
+is a defined term in this vault: a type of architectural element
+representing an overall controlling mechanism. Multiple
+superstructures may exist at different architectural levels and
+over different content; each plays its controlling-mechanism role
+in its specific context. Item 2's superstructure composes
+per-level generative models into a unified treatment of system
+prediction; D-010's superstructure orchestrates faculties at the
+deployment level; both are superstructures, but they are different
+instances. The architecture is therefore *modularly composable*
+(each level can be specified, debugged, and replaced
+independently) AND *systematically integrated* (the superstructure
+provides a unified picture of system-wide prediction).
+
+**What is predicted: external observations + internal state,
+action-conditioned.** The architecture predicts *what input will
+come next* (external observations over time) AND *the architecture's
+own internal state* (how nodes will activate, how reference frames
+will evolve, what the system itself will look like next). Both
+kinds of prediction are **action-conditioned**: the architecture's
+predictions depend on the actions it considers. Different predicted
+futures correspond to different chosen actions. The architecture is
+therefore agentive — it chooses between predicted futures, with
+action-selection informed by the predictions themselves. This puts
+the architecture in active-inference / world-model / model-based-
+agent territory, not the passive-observer territory.
+
+**Predictions operate over reference frames.** Reference frames
+(item 3, pending triage) are the substrate; predictions are
+computed over them. Mathematics is the worked example @reh3376
+named: the architecture builds reference frames *for* mathematical
+structures through the same mechanism it builds frames for any
+other domain (item 1's growth dynamics). The frames build on each
+other recursively (item 10). Higher mathematical reference frames
+enable predictions about how a system will function based on a
+mathematical representation. The math case demonstrates items
+1 + 2 + 3 + 10 working together: the same growth mechanism produces
+frames of any kind; the frames compose recursively; predictions
+operate over the frames; the prediction-substrate is hybrid α+β.
+
+**Heterogeneity of frames required.** The architecture must
+support many kinds of reference frames — physical-spatial,
+mathematical, causal-chain, social, linguistic, and others — to
+achieve general intelligence. One or a few specialized frame
+types is insufficient. @reh3376's framing: *"This will need to
+take many forms to achieve general intelligence."* Generality
+of frame-type is itself a property the architecture must have.
+
+**Cross-cutting interaction with item 10.** Per-level generative
+models AND the unifying superstructure together answer item 10's
+cross-cutting concern for item 2. Generativity recurs at every
+level of the nesting (each level has its own generative model);
+the superstructure provides cross-level integration. The
+architecture is generatively self-similar in the sense item 10
+established for the architectural pattern as a whole.
+
+**Connection to the program's working definition of general
+intelligence.** Q-2026-04-30-012 (working definition of general
+intelligence) holds @reh3376's seed answer: a strong definition
+of general intelligence would allow object trajectories,
+mathematical formulas, chain-reaction generalizations, and
+similar predictions to be reliably produced. Item 2's commitments
+specify what kind of generative substrate is required to support
+that definition.
+
+**Frozen embeddings (the MDEMG ceiling), single-paradigm
+generative models that commit only to α or β alone, single-level
+generative models without recursive composition, and passive-
+observer architectures without action-conditioning** do not
+satisfy this commitment.
+
+**Open within item 2 — to be sharpened as the architecture is
+built.** @reh3376's framing: *"As we build these structures we
+will 'learn' what is needed and we will be able to sharpen these
+action definitions."* The path from current property statement
+to fully-specified architectural commitment runs through actual
+construction work; the questions below are not gaps in the
+property statement but specifications-to-be-discovered:
+
+- **Q-T006-M (new):** What constitutes an *action* in the
+  architecture's commitment? Bodily action (motor output),
+  epistemic action (where to attend, what to query),
+  inferential action (what computation to perform), or all
+  three? Mathematics example points strongly toward at least
+  the inferential case. To be sharpened as construction
+  reveals what is required.
+- **Q-T006-N (new):** Is action *selection* part of item 2's
+  commitment, or a separate architectural element? Item 2
+  commits to action-conditioned prediction; the mechanism by
+  which actions are *chosen* among predicted futures may be
+  separate. To be specified as construction reveals what is
+  required.
+- **Q-T006-O (new):** Is the action repertoire *learned* (part
+  of what the architecture grows per item 1) or *fixed* (part
+  of the seed-structure in item 1's seed metaphor)? Both
+  options have substantial architectural consequences. To be
+  specified as construction reveals what is required.
+- **Q-T006-P (new):** What is the principled relationship
+  between α and β within the architecture — when is
+  probabilistic inference used vs. forward simulation, and how
+  is consistency between them maintained? The question lies at
+  the heart of the α+β integration claim. To be addressed in
+  T006's mathematics mode.
+- **Forward-vs-backward temporal direction** (deferred to
+  Q-007 / item 7 triage): item 2 is committed to forward
+  prediction; backward prediction (retrodiction) may live in
+  item 2 or item 7 depending on Q-007's resolution.
+
+### Items 3-9 — Pending triage
+
+Items 3-9 below remain placeholders awaiting triage. Each will
+move through the same workflow items 1, 2, and 10 just did:
+Roger sharpens; Claude pushes back; the item gets revised,
+absorbed, dropped, split, or deferred; the result is committed.
+Triage proceeds one item at a time.
+
+The three remaining from OBS-004 §2.7:
+
 3. **Reference-frame construction.** The substrate must let the
    system carve representational space into frames that support
    compositional reasoning. Inherited frames from external
