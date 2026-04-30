@@ -3,7 +3,7 @@ id: D-2026-04-28-010
 type: decision
 slug: hybrid-superstructure-with-llm-language-plugin
 created: 2026-04-28
-updated: 2026-04-28
+updated: 2026-04-30
 status: committed
 confidence: 5
 where: [T004, T001, T002, T003]
@@ -87,6 +87,23 @@ based on observed performance — the teacher's evaluation of LLM
 outputs becomes gradient signal for adapter improvement.
 
 ## Context
+
+**Note added 2026-04-30 during T006 Cycle 1 item 2 triage:**
+*Superstructure* in this vault is a **type** of architectural
+element — an overall controlling mechanism — and is not a singular
+proper noun. Multiple superstructures may exist at different
+architectural levels and over different content; each plays its
+controlling-mechanism role in its specific context. D-010's
+"hybrid superstructure" is one specific instance of this type:
+the deployment-level controlling mechanism that orchestrates
+faculties, runs the AI2AI protocol, and manages LoRA-based
+continuous learning. T006 item 2 commits to a different
+superstructure — the integrating mechanism that composes per-level
+generative models in the recursive architecture. Both are
+superstructures (instances of the same architectural pattern);
+they are different instances. D-010's commitments below stand
+unchanged; the term "superstructure" should be read with this
+clarification throughout.
 
 `D-2026-04-28-009` set the program's three-layer objectives but did
 not commit to *how* those objectives would be operationally achieved.
