@@ -138,18 +138,90 @@ but not useful). With positive space established, negative space
 becomes a focused set of "things that *appear* to satisfy these
 must-haves but actually don't."
 
-**Initial inventory of candidate must-haves** (to be sharpened
-by Roger in the cycle's research and specification modes):
+**Working set of must-haves under triage** (item 1 sharpened in
+Cycle 1's first triage pass; items 2-9 pending triage):
+
+### Item 1 — Continuous learning via input-driven, prediction-error-driven topology growth
+
+**Status:** sharpened (2026-04-28). Property statement, current
+cycle. Logical grounding deferred to subsequent cycles. Mathematics
+deferred further.
+
+The architecture is a framework for intelligence whose
+meta-structure is general, repetitive, and input-invariant —
+like the cortical column, which is a general learning structure
+that builds reference frames regardless of input modality.
+Structural invariance enables compositional generalization
+(Hawkins).
+
+The framework is the seed. Data is the soil. Input wirings are
+the mechanism of growth.
+
+*Input wirings* are the comprehensive input-side specification of
+the architecture. They include the routing of input streams to
+seed-regions, the connection density and strength priors within
+and between regions, and any other aspect of how input gets into
+the framework. Two architectures may share seed-structure and
+data while differing in input wirings; the wirings are part of
+what individuates a trained instance.
+
+Growth means: nodes and edges are created (in the graph-theoretic
+sense, not committed to any particular database technology),
+reference frames are constructed, predictions about current and
+future state are produced. When predictions match observation,
+connections strengthen. When predictions diverge from observation,
+surprise triggers new learning — new nodes, new edges, modified
+weights, possibly modified mechanisms.
+
+The architecture is **deterministic given full specification**:
+two instances with identical seed-structure, identical data, and
+identical input wirings produce identical outputs. The
+biconditional is strict — divergence in any of the three produces
+divergent outputs. The architecture is therefore **path-dependent
+on input wirings**: two trained instances are individuated by their
+seed + data + input-wiring history. Reproducibility requires all
+three.
+
+Continuous learning is **necessary** (not sufficient) for
+intelligence. Without it, systems differ only in the timescale of
+their frozenness, not in kind. The full set of substrate-level
+commitments together specify what the architecture *is*; this
+item specifies the property that makes the architecture *capable
+of being intelligence-supporting*.
+
+The mechanism owned by this item is *prediction-error-driven
+growth*. The substrate property of being a generative model is
+owned by item 2; the two items co-specify the prediction-and-
+surprise dynamic.
+
+Frozen embeddings (the MDEMG ceiling), fine-tuned adapters that
+update on a discrete schedule, and any architecture whose topology
+is fixed at design time do not satisfy this commitment.
+
+**Open within item 1:**
+
+- **Q-T006-B:** Is growth append-only, or does it include pruning
+  / forgetting / consolidation?
+- **Q-T006-C:** Is "node and edge creation" neurogenesis-
+  equivalent or capacity-recruitment-equivalent at the
+  implementation level?
+
+### Items 2-9 — Pending triage
+
+Items 2-9 below remain placeholders awaiting triage. Each will
+move through the same workflow item 1 just did: Roger sharpens;
+Claude pushes back; the item gets revised, absorbed, dropped,
+split, or deferred; the result is committed. Triage proceeds
+one item at a time.
 
 The four from OBS-004 §2.7:
 
-1. **Trainable representations.** The substrate must support
-   continuous representation learning. Frozen embeddings (the
-   MDEMG ceiling) are not sufficient.
 2. **Generative modeling / prediction.** The substrate must
    produce predictions about current state and future state. A
    storage-and-retrieval substrate (the MDEMG ceiling) is not
-   sufficient.
+   sufficient. *(Co-specifies prediction-and-surprise dynamic
+   with item 1; substrate-property side here, mechanism in item
+   1.)*
 3. **Reference-frame construction.** The substrate must let the
    system carve representational space into frames that support
    compositional reasoning. Inherited frames from external
@@ -167,7 +239,10 @@ The five from T004 (Q-005 through Q-009):
    identity.
 6. **Dimensional minimum-commitment** (Q-006). The system's
    representational dimensionality is not pre-specified; it
-   commits only to what the data demands.
+   commits only to what the data demands. *(Tentatively absorbed
+   into item 1 pending triage of item 6 — the input-driven
+   growth process determines dimensionality, so this may not be
+   independent.)*
 7. **Projection-and-anchoring** (Q-007). Projection of current
    state forward and backward in time, anchored to invariants
    the system has identified.
@@ -208,6 +283,15 @@ to provide it.
 - Gaps and tensions are surfaced as questions, not papered over
 - Roger judges the cycle's output as a usable foundation for
   Cycle 2
+
+**Methodological commitment** (settled 2026-04-28 during item 1
+triage): logical grounding for each must-have is the *direction*
+of the work, not a Cycle 1 gate criterion. Each must-have starts
+as a sharpened property statement in this cycle; logical grounding
+is earned over multiple cycle iterations; mathematics mode comes
+later. **Phase A is multi-cycle by construction.** Cycle 1
+produces the inventory in sharpened-property-statement form;
+subsequent cycles add depth.
 
 **Likely Cycle 2 candidates** (do not commit yet — depends on
 Cycle 1's outcome):

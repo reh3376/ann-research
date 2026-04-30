@@ -219,6 +219,110 @@ there is only the work of articulating what the new system must be.
 
 ## Log
 
+### 2026-04-28 — Cycle 1 triage: item 1 sharpened
+
+Cycle 1 entered research mode via triage workflow. Each candidate
+must-have walks through: Roger sharpens; Claude pushes back; the
+item gets revised, absorbed, dropped, split, or deferred; the
+result commits.
+
+**Item 1 sharpened from "Trainable representations" placeholder
+into "Continuous learning via input-driven, prediction-error-
+driven topology growth."** Five turns of conversation produced
+the property statement now in plan.md.
+
+**Settled in this triage:**
+
+- The architecture is a *framework for intelligence* whose
+  meta-structure is general, repetitive, and input-invariant
+  (Hawkins-cortical-column generalization principle).
+- Continuous learning is **necessary** (not sufficient) for
+  intelligence. Without it, systems differ only in the timescale
+  of their frozenness, not in kind.
+- Growth dynamics: prediction-error-driven. Match strengthens
+  connections; surprise-on-divergence triggers new learning
+  (new nodes, new edges, modified weights, possibly modified
+  mechanisms).
+- The "seed-soil-input wirings" framing: framework is the seed,
+  data is the soil, input wirings are the mechanism of growth.
+  Seed metaphor is **weak** — evocative but not committing the
+  architecture to a pre-specified developmental program.
+- Reference frames are **created** by the growth process, not
+  pre-given.
+- The architecture is **deterministic given full specification**:
+  identical seed + identical data + identical input wirings →
+  identical outputs. Biconditional is strict.
+- The architecture is **path-dependent on input wirings**: two
+  trained instances are individuated by their seed + data +
+  input-wiring history. Reproducibility requires all three.
+  (Weak-B reading from sharpening discussion.)
+- *Input wirings* defined comprehensively (Reading 3): routing
+  of input streams to seed-regions, connection density and
+  strength priors within and between regions, and any other
+  aspect of how input gets into the framework.
+- Prediction-and-surprise dynamic is **co-specified between
+  items 1 and 2**: item 1 owns the *mechanism* (prediction-error-
+  driven growth); item 2 owns the *substrate property* (the
+  architecture is a generative model). Option γ from sharpening
+  discussion.
+- "Nodes and edges" used in graph-theoretic sense — no commitment
+  to graphDBs or any particular implementation technology.
+- Output-form / output-content distinction parallels topology-
+  meta / topology-instance: the form is invariant; content is
+  input-driven.
+
+**Methodological commitments settled in this triage:**
+
+- Logical grounding for each must-have is the *direction* of the
+  work, not a Cycle 1 gate criterion. Each must-have starts as a
+  sharpened property statement; logical grounding earned over
+  multiple cycle iterations; mathematics later.
+- **Phase A is multi-cycle by construction.** Cycle 1 produces
+  the inventory in sharpened-property-statement form; subsequent
+  cycles add depth.
+- The triage workflow itself (Roger sharpens → Claude pushes back
+  → revise/absorb/drop/split/defer → commit) is the working
+  method's research mode in operation.
+
+**Open within item 1 (deferred to subsequent cycles or to triage
+of related items):**
+
+- **Q-T006-B:** Is growth append-only, or does it include pruning
+  / forgetting / consolidation? Surfaced when the bivalent match/
+  no-match dynamic was specified. Deferred — to be addressed when
+  the growth dynamics get sharpened in research mode.
+- **Q-T006-C:** Is "node and edge creation" neurogenesis-
+  equivalent or capacity-recruitment-equivalent at the
+  implementation level? Different implementation paths; same
+  observable behavior at the property-statement level.
+
+**Resolved during item 1 triage (now closed, not filed as
+Q-artifacts):**
+
+- **Q-T006-A** (necessity grounding — practical/logical/both):
+  resolved to *logical first, practical derived from logical*.
+- **Q-T006-D** (output-form / output-content distinction):
+  resolved to *meta in nature*.
+- **Q-T006-E** (strong vs. weak seed metaphor): resolved to
+  *weak*.
+- **Q-T006-F** (prediction-and-surprise placement): resolved to
+  *Option γ — lives in both items 1 and 2*.
+- **Q-T006-G** (logical grounding strict vs. loose): resolved to
+  *looser*.
+- **Q-T006-H** (scope of "input wirings"): resolved to *Reading
+  3 — comprehensive input-side specification including routing,
+  connectivity priors, and any other input-side aspect*.
+
+**Tentative absorptions** (pending triage of named items):
+
+- Item 6 (Dimensional minimum-commitment) tentatively absorbed
+  into item 1 — the input-driven growth process determines
+  representational dimensionality. Confirmation pending when
+  item 6 is reached in triage.
+
+**Items 2-9 status:** pending triage. Triage proceeds one item
+at a time; subsequent PRs continue the workflow.
+
 ### 2026-04-28 — Thread opened
 
 @reh3376 named T006 as the central thread for the program's
