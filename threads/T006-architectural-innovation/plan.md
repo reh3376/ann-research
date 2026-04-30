@@ -161,9 +161,13 @@ the mechanism of growth.
 the architecture. They include the routing of input streams to
 seed-regions, the connection density and strength priors within
 and between regions, and any other aspect of how input gets into
-the framework. Two architectures may share seed-structure and
-data while differing in input wirings; the wirings are part of
-what individuates a trained instance.
+the framework. **Input streams may be sensory data from the
+external world or the outputs of other topologies; the framework
+treats both uniformly. Inter-topology wiring is the mechanism by
+which the architecture composes with itself recursively (see item
+10).** Two architectures may share seed-structure and data while
+differing in input wirings; the wirings are part of what
+individuates a trained instance.
 
 Growth means: nodes and edges are created (in the graph-theoretic
 sense, not committed to any particular database technology),
@@ -258,6 +262,101 @@ The five from T004 (Q-005 through Q-009):
 These are placeholders for Roger to revise, sharpen, prune,
 expand, or replace. The list is the cycle's starting input,
 not its conclusion.
+
+### Item 10 — Recursive composability
+
+**Status:** sharpened (2026-04-28). Property statement, current
+cycle. Logical grounding deferred to subsequent cycles. Mathematics
+deferred further (and explicitly noted by @reh3376 as requiring
+new mathematics not yet developed).
+
+The architecture is **recursively composable**. The same
+architectural pattern that defines a single topology — general,
+repetitive, input-invariant meta-structure with continuous
+learning, prediction-error-driven growth, reference-frame
+construction, and the other substrate-level commitments — applies
+at every level of nested composition.
+
+The recursion works via inputs. A topology's outputs can be wired
+as the input streams of another topology. Inter-topology wiring
+is treated by the framework no differently than sensory wiring
+(see item 1's input-wirings paragraph). Topologies nest to **N
+levels**.
+
+**Pattern at every level.** The architectural pattern recurs
+identically across the nesting. Each topology in the recursion is
+an instance of the pattern. Each instance has continuous
+learning, generative modeling, reference-frame construction, the
+other must-haves. The composition of instances also has these
+properties — they hold at the level of the nested whole, not just
+at the level of individual topologies. The architecture is
+**self-similar in the strict sense**: the same pattern appears
+at every scale of the nesting.
+
+**Necessity for functional viability.** Recursive composability
+is not optional. Without it, the architecture is reduced to a
+single-level topology that cannot move beyond the representational
+scope its first inputs admit. A framework intended to support
+intelligence must compose with itself; this is a property the
+architecture must have for the framework to be functionally
+viable.
+
+**Cross-cutting concern.** Recursive composability is *both* a
+numbered must-have (this item) *and* a cross-cutting concern
+that threads through all the must-haves. As items 2-9 are
+sharpened, each must address how recursion interacts with its
+content. Specifically:
+
+- *Item 2 (Generative modeling)*: does the architecture maintain
+  one generative model that nests, one model per level, or both?
+- *Item 3 (Reference-frame construction)*: reference frames at
+  one level become inputs at the next; the construction process
+  must accommodate this. @reh3376 has flagged this is integral
+  to portions of item 3.
+- *Item 4 (Meta-learning)*: is meta-learning recursive — can
+  the architecture meta-learn its meta-learning rules at higher
+  levels of nesting?
+- *Items 5-9 (T004 facets)*: each may have its own interaction
+  with recursion to be addressed when triaged.
+
+**Hawkins precedent.** This item generalizes the cortical-column
+framing already named in item 1. Item 1 said the architecture is
+*like* the cortical column. Under "pattern at every level," the
+architecture *is* the cortical-column-equivalent, instantiated
+recursively. The brain-equivalent emerges from the recursion of
+the column-equivalent — analogous to how cortical regions
+compose in biological systems, with regions distinguished by
+what they end up representing rather than by how they compute.
+
+**What the recursion produces (leading hypothesis, not committed
+to in this property statement).** The leading research hypothesis
+about what recursive composability accomplishes is filed as
+Q-2026-04-28-011 (knowledge builds skills via nesting) — a
+strong-prior hypothesis that the recursion's higher levels
+produce skills as meta-frames over knowledge frames. Item 10
+commits to *capability* (the architecture must be capable of
+recursive composition); Q-011 tracks the *expected behavior*
+(what the recursion produces) as a research target.
+
+**Open within item 10:**
+- The dimensional ceiling that applies uniformly to the pattern
+  is named separately in item 1 ("Max dimensionality is a hard
+  constraint that we will need to research to find the proper
+  trade offs between complexity and computational constraints").
+  Individual topologies in the nesting may have lower
+  dimensionality than the ceiling; the ceiling is uniform but
+  the actual instantiation varies. To be sharpened when item 6
+  reaches triage.
+- Q-T006-L (new): What is the relationship between item 10's
+  recursion and the path-dependence-on-input-wirings claim from
+  item 1? Path-dependence at one level cascades into path-
+  dependence at higher levels; the implications need formal
+  treatment when mathematics mode is reached.
+- Mathematical treatment of N-level nesting with the
+  determinism-given-full-specification claim from item 1: this
+  is one of the places @reh3376 has flagged that **new
+  mathematics will definitely be required**. Deferred to
+  T006's mathematics mode.
 
 **Cycle 1 deliverable.** An observation artifact that captures
 the sharpened must-haves — for each, a precise specification of
