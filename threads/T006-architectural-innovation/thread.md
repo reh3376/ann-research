@@ -219,6 +219,143 @@ there is only the work of articulating what the new system must be.
 
 ## Log
 
+### 2026-04-30 — Cycle 1 triage continued: item 3 sharpened (5-prompt deliberate methodology)
+
+**Item 3 sharpened from "Reference-frame construction" placeholder
+into "Reference-frame construction: foundation for learning,
+emergent boundedness, domain-neutral, identity with topologies,
+emergent compositional reasoning."** This was the most extensive
+sharpening conversation in T006 to date — five distinct prompts
+addressed sequentially over multiple turns, each settled before
+moving to the next, with a methodological commitment to "deliberate
+but with deferrals allowed" (Reading Y) explicitly chosen by
+@reh3376 over a stricter "fully quantified before moving on"
+(Reading X). Five conversation turns produced the property
+statement now in plan.md.
+
+**Settled in this triage (cumulative across five prompts):**
+
+- **Reference frames are foundational to learning.** "The foundation
+  all learning is built upon" (@reh3376's framing). House analogy:
+  the house is the learning; the foundation is the reference frame;
+  the foundation must be in place before the house can be built.
+- **Foundation precedes learning at the across-level scale, not
+  the within-level scale (Reconciliation B).** Frames at level N
+  enable learning at level N+1. At any given level, the frame *is*
+  the topology growing under input drive.
+- **Closest reading: spatial coordinate system (Hawkins/Mountcastle/
+  grid-cell tradition).** Reading α captures more than the others
+  but does not exhaust the content; additional content distributed
+  across subsequent prompts.
+- **Boundedness: emergent via co-activation patterns (Reading II)
+  with recursive exposure implied (Reading III).** Explicit
+  container machinery rejected (Reading I) — it would over-constrain
+  the framework and inhibit emergent behavior, "a necessary
+  consequence of the structure being built."
+- **Domain-neutrality (Reading B).** Frames are uniform machinery;
+  type comes from inputs alone, not architectural structure.
+  Cortical-column generalization at the frame level.
+- **Architectural risk: EX-3 (recursion-induced exponential
+  expansion).** Reading B may produce exponential expansion of
+  frame-combinations across the recursion at scale. Recorded as
+  specific architectural risk with revision condition: if EX-3
+  manifests beyond workable hardware constraints during
+  construction, item 3 may be revised toward Reading C (learned
+  type-clustering) or another compromise.
+- **Identity with topologies (Reading 1).** Frames ARE topologies.
+  One architectural element, two perspectives — topology when
+  discussing computational dynamics; reference frame when
+  discussing representational role. Item 10's recursion of
+  topologies IS item 3's recursion of frames. Item 3 adds
+  representational perspective; it does not introduce new
+  architectural primitives.
+- **Compositional reasoning: A + B + C all required as outcomes;
+  emergence as the mechanism.** Symbolic-style composition (A),
+  generalization to novel situations (B), and multi-step reasoning
+  (C) are all required outcomes for general intelligence.
+  Mechanism is emergence (co-activation, recursion, growth
+  dynamics) — explicit binding/composition/chaining machinery
+  rejected on the same grounds as Reading I in prompt 2.
+- **Multi-modal binding via cross-frame co-activation edges (T1
+  extension of Reading II).** Multiple frames per referent, one
+  per input type, connected via cross-frame co-activation. Same
+  mechanism as within-frame boundedness, operating at different
+  scale. CUIDv2 reference in @reh3376's example treated as
+  illustrative (I-1), not committing the architecture to
+  addressable identifiers.
+
+**Methodological notes settled in this triage:**
+
+- **Metaphor handling:** Two metaphors used in the vault — seed-
+  soil-input-wirings (item 1) and foundation-house (item 3) —
+  illustrate different aspects and should not be layered together.
+  Mixing them creates apparent tensions that are artifacts of the
+  combination, not real architectural contradictions. @reh3376's
+  framing: *"all metaphors are incorrect, but some are useful."*
+- **Reading Y methodology** (deliberate-but-with-deferrals)
+  explicitly chosen for item 3 over Reading X (full quantification
+  before moving on). Each prompt sharpened to satisfaction;
+  deferrals to construction work or future cycles allowed.
+  Methodological pattern: "as we build these structures we will
+  learn what is needed."
+- **Accumulate-then-draft** approach used: each prompt's settlement
+  recorded; full property statement drafted only after all five
+  prompts settled. This is a slower but more rigorous pattern than
+  items 1, 2, 10 used; appropriate to item 3's foundational role.
+- **Item 3 is shorter on architectural primitives than items 1,
+  2, 10** because Reading 1 (frames ARE topologies) means item 3
+  adds *perspective*, not *primitive*. Most of item 3's content is
+  the representational perspective on item 10's architectural
+  element.
+
+**New questions surfaced (deferred to subsequent cycles or
+construction work):**
+
+- **Q-T006-Q (new):** What is the precise mechanism by which
+  cross-frame co-activation edges form, persist, and dissolve?
+  Multi-modal binding committed; specific dynamics not yet
+  specified. Deferred to construction work.
+- **Q-T006-R (new):** Does the EX-3 risk materialize at scale,
+  and if so, what is the appropriate revision direction? Deferred
+  until construction work produces resource profiles to evaluate
+  against.
+
+**Resolved during item 3 triage (now closed; not filed as
+separate Q-artifacts since they were sharpening prompts within
+the conversation):**
+
+- **Reading X vs Y for item 3 methodology:** Reading Y (deliberate
+  with deferrals) confirmed.
+- **Reconciliation A/B/C for foundation/growth tension:**
+  Reconciliation B confirmed (across-level precedence, not
+  within-level).
+- **What α doesn't capture — name now / defer to prompts / defer
+  to construction:** Option b confirmed (defer to subsequent
+  prompts); content distributed across prompts 2-5 settlements.
+- **Reading I/II/III for boundedness:** Reading II primary,
+  Reading III implied, Reading I rejected.
+- **Reading A/B/C for typing:** Reading B confirmed; EX-3 risk
+  recorded with revision condition.
+- **Handling 1/2/3 for EX-3 risk:** Handling 1 confirmed
+  (conditional commitment with concerns stated).
+- **Specific exponential expansion mode (EX-1/2/3):** EX-3
+  (recursion-induced) confirmed.
+- **Reading 1/2/3 for frames-vs-topologies:** Reading 1 confirmed
+  (frames ARE topologies).
+- **R-C-only / R-C-as-primary / option (b) / option (c) for
+  compositional reasoning:** option (b) confirmed (A+B+C all
+  required as outcomes; mechanism is emergence).
+- **T1/T2 for cross-frame co-activation:** T1 confirmed
+  (extension of Reading II at different scale).
+- **I-1/I-2 for CUIDv2:** I-1 confirmed (illustrative).
+- **P/Q for cross-frame mechanism specification:** Q confirmed
+  (defer to subsequent cycles).
+
+**Inventory state:** 4 of 10 items sharpened (1, 2, 3, 10). Item
+3 closes prompt 5 with a property statement that integrates all
+five prompts plus the multi-modal binding extension. Items 4-9
+remain pending; item 6 still tentatively absorbed into item 1.
+
 ### 2026-04-30 — Cycle 1 triage continued: item 2 sharpened + Q-012 filed + D-010 clarification
 
 **Item 2 sharpened from "Generative modeling / prediction"
