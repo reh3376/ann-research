@@ -355,20 +355,197 @@ property statement but specifications-to-be-discovered:
   prediction; backward prediction (retrodiction) may live in
   item 2 or item 7 depending on Q-007's resolution.
 
-### Items 3-9 — Pending triage
+### Item 3 — Reference-frame construction: foundation for learning, emergent boundedness, domain-neutral, identity with topologies, emergent compositional reasoning
 
-Items 3-9 below remain placeholders awaiting triage. Each will
-move through the same workflow items 1, 2, and 10 just did:
+**Status:** sharpened (2026-04-30). Property statement, current
+cycle. Logical grounding deferred to subsequent cycles.
+Mathematics deferred further.
+
+**Triage methodology note.** Item 3 was triaged via a deliberate
+five-prompt sharpening (slower than items 1, 2, 10 by intent),
+because @reh3376 flagged reference frames as "the foundation all
+learning is built upon." The five prompts each closed before
+moving to the next; the property statement below integrates all
+five.
+
+**Reference frames are foundational to learning.** Before any
+concept can be learned, before any sensor input can be understood,
+the architecture must first establish a frame of reference into
+which the learning will fit. The frame is the substrate that
+makes the classification and learning *possible at all*. A house
+analogy makes this concrete: the house is the learning; the
+foundation is the reference frame; the foundation must be in
+place before the house can be built, and it must be substantial
+and well-grounded.
+
+**Metaphor handling note.** Two metaphors are used throughout
+this vault — the seed-soil-input-wirings metaphor from item 1,
+and the foundation-house metaphor here. They illustrate
+*different aspects* of the architecture and should not be layered
+together. Seed-soil-input-wirings is about how the framework
+grows under input drive (item 1); foundation-house is about how
+frames provide the substrate for learning to be built upon
+(item 3). Mixing them creates apparent tensions that are
+artifacts of the metaphor combination, not real architectural
+contradictions.
+
+**The foundation-precedes-learning relation is across-level, not
+within-level (Reconciliation B).** Reference frames precede the
+learning *they support* in the sense that frames at level N
+enable learning at level N+1. They do not precede learning in
+some absolute temporal sense — at any given level, the frame
+*is* the topology growing under input drive. The "foundation
+first, house after" relation holds across the recursion, not
+within a single topology's growth.
+
+**Closest existing reading: spatial coordinate system (Hawkins /
+Mountcastle / grid-cell tradition), with additional content not
+exhausted by that reading.** Of the three readings in the
+literature (spatial coordinate systems / discrete relational
+structures / predictive context), the spatial-coordinate-system
+reading captures more of what reference frames are in this
+architecture than the others. The Hawkins/Mountcastle/grid-cell
+tradition is the lineage being invoked. But the full content of
+"reference frame" in this architecture extends beyond what the
+spatial-coordinate-system reading alone supplies; the additional
+content is specified in the items below.
+
+**Boundedness: emergent via co-activation patterns (Reading II);
+recursive exposure also implied (Reading III); explicit container
+machinery rejected (Reading I).** What makes things "in the same
+frame" is that they activate together under similar conditions;
+the frame *is* the recurring activation pattern. There is no
+separate "frame object" that exists apart from the pattern of
+co-activation. Recursive exposure (what gets passed up to the
+next level via inter-topology wiring) provides cross-level
+boundedness as a structural consequence of item 10. Explicit
+container machinery (frames as nameable, addressable objects)
+is rejected on the grounds that it would over-constrain the
+framework and inhibit emergent behavior — and emergence is a
+*necessary consequence* of the structure being built.
+
+**Domain-neutrality: frames are uniform machinery; type emerges
+from inputs alone (Reading B).** Frames as architectural objects
+are uniform across the architecture — same construction
+mechanism, same boundary mechanism, same kind of thing. Domain
+is what they *acquired* through their growth history, not what
+they *are* architecturally. This is the cortical-column
+generalization principle (the column is uniform across regions;
+what it represents depends on what it received) applied at the
+frame level. It is consistent with item 1's input-invariance
+claim and item 10's pattern-at-every-level claim.
+
+**Architectural risk: recursion-induced exponential expansion
+(EX-3).** Reading B's commitment to domain-neutrality may
+produce, at scale, exponential expansion of the number of
+frame-combinations the architecture maintains across the
+recursion. Each level's frames are domain-neutral; higher levels
+see all combinations of lower frames as candidates; without
+type-clustering, every combination is a candidate. This is a
+specific architectural risk recorded with the commitment, not a
+generic resource design consideration. **Revision condition:**
+if the EX-3 failure mode manifests beyond workable hardware
+constraints during construction work, item 3 may be revised —
+possibly toward Reading C (uniform machinery with learned
+type-clustering as an emergent property), possibly toward a
+different compromise.
+
+**Identity with topologies (Reading 1).** Reference frames are
+not a separate architectural element from topologies. There is
+*one* architectural element with two perspectives: when discussing
+its computational dynamics (growth, prediction, action-
+conditioning, recursive composition), we call it a topology;
+when discussing its representational role (foundation for
+learning, what input gets understood against), we call it a
+reference frame. Item 10's recursion of topologies *is* item 3's
+recursion of frames. The frames-build-on-each-other claim from
+item 2's math example *is* item 10's topologies-nest-to-N-levels.
+Single architectural element; single recursion; single
+mechanism. Item 3 adds the representational perspective on what
+item 10 already specifies; it does not introduce a new
+architectural primitive.
+
+**Compositional reasoning: A + B + C all required as outcomes;
+emergence as the mechanism, not explicit definition.** The
+architecture must support symbolic-style composition (A:
+reasoning about A-AND-B from reasoning about A and B),
+generalization to novel situations (B: applying frames learned
+in old situations to new ones), and multi-step reasoning (C:
+chaining predictions across multiple frame applications). All
+three are required outcomes for general intelligence. **The
+mechanism by which the architecture supports them is emergence,
+not explicit definition.** The topology is structured to allow
+this behavior to emerge from the growth dynamics, the
+co-activation patterns, the recursive composition; explicit
+binding machinery, explicit composition operators, explicit
+chaining mechanisms are rejected for the same reason explicit
+container machinery was rejected in the boundedness commitment
+— they would inhibit the emergent behavior that the architecture
+is designed to support.
+
+**Multi-modal binding via cross-frame co-activation edges
+(extension of Reading II at a different scale).** A given
+external referent (a process, an object, a concept) can have
+multiple reference frames associated with it, each with a
+different input type — for example, a video-camera frame, a
+natural-language frame, and a knowledge-graph frame all
+referring to the same process. The frames are wired together
+via *co-activation edges* — a structural element that emerges
+when the frames fire together for the same external stimulus.
+This is the same co-activation mechanism that produces
+within-frame boundedness (Reading II), operating at a different
+scale: within-frame co-activation produces frame structure;
+cross-frame co-activation produces the binding between
+frames-for-the-same-referent. One mechanism, two scales,
+consistent with item 10's pattern-at-every-level. The precise
+mechanism by which cross-frame co-activation edges form,
+persist, and dissolve is deferred to subsequent cycles per the
+"as we build these structures we will learn what is needed"
+methodological pattern from item 2.
+
+**Cross-cutting interaction with item 10.** Per the identity
+commitment (Reading 1), item 3's content is largely the
+representational perspective on item 10's architectural element.
+Recursive composability of frames *is* recursive composability
+of topologies (item 10). The frame-building-foundation-then-
+house metaphor describes the across-level structure of item
+10's recursion from the representational side. Item 3 adds
+perspective; it does not add architectural primitives.
+
+**Frozen embeddings (the MDEMG ceiling), externally-imposed
+frames (inherited from file paths or symbol trees), and any
+architecture whose representational organization is fixed at
+design time** do not satisfy this commitment.
+
+**Open within item 3 — to be sharpened as the architecture is
+built:**
+
+- **Q-T006-Q (new):** What is the precise mechanism by which
+  cross-frame co-activation edges form, persist, and dissolve?
+  Deferred to construction work per the methodological pattern.
+  Multi-modal binding is committed; the specific dynamics are
+  not yet specified.
+- **Q-T006-R (new):** Does the EX-3 risk under Reading B
+  materialize at scale, and if so, what is the appropriate
+  revision direction? Deferred until construction work produces
+  resource profiles to evaluate against.
+- **The "additional content not captured by the spatial-
+  coordinate-system reading"** is now distributed across the
+  property statement above (emergent boundedness, domain-
+  neutrality, identity-with-topologies, emergent composition,
+  multi-modal binding). If further content emerges from
+  construction work, item 3 may be extended.
+
+### Items 4-9 — Pending triage
+
+Items 4-9 below remain placeholders awaiting triage. Each will
+move through the same workflow items 1, 2, 3, and 10 have done:
 Roger sharpens; Claude pushes back; the item gets revised,
 absorbed, dropped, split, or deferred; the result is committed.
 Triage proceeds one item at a time.
 
-The three remaining from OBS-004 §2.7:
+The remaining from OBS-004 §2.7:
 
-3. **Reference-frame construction.** The substrate must let the
-   system carve representational space into frames that support
-   compositional reasoning. Inherited frames from external
-   structure (the MDEMG ceiling) are not sufficient.
 4. **Meta-learning / mechanism modification.** The substrate
    must let the system modify its own learning rules over time.
    Parameter-only modification within fixed mechanisms (the
