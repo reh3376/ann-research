@@ -219,6 +219,145 @@ there is only the work of articulating what the new system must be.
 
 ## Log
 
+### 2026-04-30 — Cycle 1 triage continued: item 4 sharpened (5-prompt deliberate, with foundational-assumptions interruption mid-Prompt-1)
+
+**Item 4 sharpened from "Meta-learning / mechanism modification"
+placeholder into "Meta-learning / mechanism modification:
+meta-learning IS what the recursion produces; growth-dynamic and
+Bayesian-broad content; perspective-not-substrate distinction
+from RSIC; BNN-medium evidence-driven."**
+
+The triage was substantively interrupted mid-Prompt-1 when
+@reh3376 recognized that unstated core assumptions had been
+doing real work in prior conversations. The foundational-
+assumptions exercise produced D-2026-04-30-012 (committed in PR
+#19) before item 4's remaining prompts continued. Item 4's
+content depends substantially on the combination of items 1, 2,
+3, 10, and D-012; the property statement now in plan.md
+integrates all five prompts plus the foundational assumption's
+framing.
+
+**Settled in this triage (cumulative across five prompts):**
+
+- **Prompt 1 — Possibility 2 (B' partial commitment).** What
+  gets modified by meta-learning at the property-statement level:
+  Reading I (item 1's growth dynamics) and Reading II (item 2's
+  α/β integration mechanism). Readings III (action repertoire)
+  and V (frame-construction) **deferred to construction work**.
+  Pure deferral (Settlement type B) was reviewed against D-012's
+  availability and refined to partial commitment based on
+  D-012's Bayesian-broad and BNN-as-evidence components making
+  Readings I + II defensible at the property-statement level.
+- **Prompt 2 — Reading C.** Meta-learning IS what the recursion
+  produces. No separate meta-learning mechanism. Level N+1's
+  learning *about* level N's learning IS meta-learning;
+  self-similar all the way up. The recursion's directionality
+  from item 3 (Reconciliation B) extends to meta-learning.
+- **Prompt 3 — Reading Z.** The parameter/mechanism distinction
+  is perspective-artifact, not substrate. What's a parameter at
+  one level is a mechanism at the level below; what's a
+  mechanism at one level is a parameter at the level above. The
+  architecture has just one substrate (the recursive pattern);
+  parameters and mechanisms are different views at different
+  recursion levels. **Item 4 supersedes the parameter/mechanism
+  distinction RSIC operates within** rather than negating RSIC
+  (Reading X) or being RSIC-plus-mechanism-modification (Reading
+  Y).
+- **Prompt 4 — Reading 3.** Meta-learning emerges; mechanism is
+  the recursion itself. Reading 2 (meta-learning has its own
+  mechanism distinct from learning) was foreclosed by Prompts 2
+  and 3 — inconsistent with Reading C and Reading Z. Reading 1
+  (meta-learning emerges from same growth dynamics applied to
+  different content) is functionally equivalent to Reading 3
+  under current settlements; Reading 3's framing chosen because
+  it foregrounds the recursion-as-substrate language already
+  established.
+- **Prompt 5 — B-medium.** BNN as structural source for what's
+  necessary; architecture departs where biology is
+  constraint-artifact. Matches D-012 Component 2's R-evidence
+  reading. The architecture takes structural cues from BNN
+  meta-learning where the BNN evidence suggests something is
+  necessary for meta-learning to work, but is not bound to
+  specific biological mechanisms.
+
+**The architecture's self-similarity is now substantively complete.**
+The combination of items 3 (Reading 1 — frames ARE topologies) +
+10 (pattern-at-every-level) + item 4 Prompts 2 and 3 (meta-learning
+is recursion-perspective; parameters are mechanisms at adjacent
+levels) gives the architecture a coherent self-similarity story:
+one substrate, one recursion, multiple perspectives at multiple
+levels. This is the program's strongest commitment about
+architectural unity.
+
+**Working method's discipline functioned at multiple points:**
+
+- **Pushback on @reh3376's "you decide on the rest" delegation**
+  during foundational-assumptions exercise mid-Prompt-1, before
+  item 4's other prompts continued. @reh3376's response: *"I
+  see, you are correct to do so here."* Recorded in PR #19
+  thread log.
+- **Identification of "Reading C" labeling ambiguity** in
+  Prompt 4's answer (Prompt 2 used Reading-C label; Prompt 4
+  offered Readings 1/2/3). @reh3376 confirmed intent was Reading
+  3 for Prompt 4. Confirmation prevented misattribution.
+- **Possibility 2 shift from Settlement type B** when D-012's
+  availability was reviewed for Prompt 1. @reh3376 explicitly
+  reviewed B against D-012's content and updated to B' partial
+  commitment.
+
+**Methodological commitment recorded — recurring "start simple,
+build as we go" pattern.** Item 4 is the **fifth instance** of
+this pattern: looser logical grounding (PR #13 gates),
+accumulate-then-draft (item 3), property statements deferring
+specification to construction (items 1-3), hypothesis-with-
+revision-condition (Q-014), and now meta-learning's working-level
+commitments revisable through R&D cycles (item 4). @reh3376's
+framing during item 4: *"It is more of an intuitive 'guess' than
+a full commitment at this point, but that is the reason we are
+building this... The data will drive direction, we will act on it
+as it is gathered and analyzed."* This pattern is becoming
+sufficiently stable across cycle work that it may deserve to be
+named as an explicit methodological commitment in a future
+artifact.
+
+**What-it-is-not framing surfaced (preserved in property
+statement).** @reh3376's contrast: *"We know it is not LLM
+transformers and next token prediction with extensive harnesses."*
+Item 4 records by exclusion that the architecture's meta-learning
+is not what LLM-with-harness systems do — meta-learning happens at
+the substrate level, in the framework's own growth and
+probabilistic infrastructure, not in scaffolding around the
+substrate.
+
+**New questions surfaced (deferred to construction work):**
+
+- **Q-T006-U (new):** What is meta-learned over the architecture's
+  action repertoire? (Tightly coupled to Q-T006-O from item 2.)
+  Reading III from Prompt 1 deferred.
+- **Q-T006-V (new):** What is meta-learned over the
+  reference-frame construction process? (Tightly coupled to item
+  3 and Q-T006-Q.) Reading V from Prompt 1 deferred.
+
+**Resolved during item 4 triage (now closed; not filed as
+separate Q-artifacts):**
+
+- Settlement type B vs B' for Prompt 1 given D-012: B'
+  (Possibility 2) confirmed
+- Reading A/B/C for Prompt 2: Reading C confirmed
+- Reading X/Y/Z for Prompt 3: Reading Z confirmed
+- Reading 1/2/3 for Prompt 4: Reading 3 confirmed (Reading 2
+  foreclosed by Prompts 2 + 3)
+- B-strong/B-medium/B-loose for Prompt 5: B-medium confirmed
+- Whether Prompt 5 should be added to original four prompts:
+  added (D-012's BNN-as-evidence component made it relevant)
+- Sequencing of prompts (one-at-a-time vs batch): one-at-a-time
+  per @reh3376's request; deliberate item-3 pattern reused
+
+**Inventory state:** 5 of 10 items sharpened (1, 2, 3, 4, 10).
+Items 5-9 remain pending; item 6 still tentatively absorbed into
+item 1. Foundational assumption (D-012) committed and available
+as inheritance for items 5-9.
+
 ### 2026-04-30 — Foundational-assumptions exercise: D-012 committed + Q-013 + Q-014 filed
 
 **Stepped out of item 4's per-prompt triage** mid-Prompt-1 when @reh3376
