@@ -536,20 +536,227 @@ built:**
   multi-modal binding). If further content emerges from
   construction work, item 3 may be extended.
 
-### Items 4-9 — Pending triage
+### Item 4 — Meta-learning / mechanism modification: meta-learning IS what the recursion produces; growth-dynamic and Bayesian-broad content; perspective-not-substrate distinction from RSIC; BNN-medium evidence-driven
 
-Items 4-9 below remain placeholders awaiting triage. Each will
-move through the same workflow items 1, 2, 3, and 10 have done:
-Roger sharpens; Claude pushes back; the item gets revised,
+**Status:** sharpened (2026-04-30). Property statement, current
+cycle. Logical grounding deferred to subsequent cycles.
+Mathematics deferred further (and substantially co-extensive with
+the mathematics already named as deferred for items 1, 2, 3, 10
+and Q-T006-S/T from D-012).
+
+**Triage methodology note.** Item 4 was triaged via a five-prompt
+sequential sharpening (deliberate item-3 pattern), with a
+substantive interruption mid-Prompt-1 to surface and commit the
+program's foundational assumption (D-2026-04-30-012). The
+foundational assumption was filed before item 4's remaining
+prompts continued. Item 4's content depends substantially on the
+combination of items 1, 2, 3, 10, and D-012; the property
+statement below integrates all five prompts plus the foundational
+assumption's framing.
+
+**Item 4 is shorter on architectural primitives than items 1, 2,
+10** because the combination of Prompts 2 and 3 (Reading C and
+Reading Z respectively) means meta-learning is not a new
+architectural primitive — it is the across-level perspective on
+what items 1 and 10 already specify. Item 4 adds *content about
+what gets meta-learned* and *how the architecture's recursion
+works as meta-learning*, but does not add new mechanisms.
+
+**Necessity claim.** The substrate must let the architecture
+modify its own learning rules over time. Parameter-only
+modification within fixed mechanisms (the RSIC scope, in MDEMG
+vocabulary) is not sufficient — but item 4 commits to a stronger
+position than "more than RSIC": the parameter/mechanism
+distinction itself is perspective-artifact, not substrate. See
+**Reading Z** below.
+
+**What gets modified (Prompt 1 — Possibility 2 / B' partial
+commitment).** At the property-statement level, item 4 commits
+to meta-learning operating over:
+
+- **Item 1's growth dynamics.** The architecture's
+  prediction-error-driven growth — match-strengthens-connections,
+  surprise-triggers-new-learning — is itself subject to
+  modification by meta-learning. The architecture may learn that
+  for some kinds of input, surprise should trigger different
+  kinds of growth; meta-learning modifies how prediction-error
+  connects to growth.
+- **Item 2's α/β integration mechanism.** When the architecture
+  uses probabilistic inference vs. forward simulation, how the
+  two relate, when each is invoked. Meta-learning is the
+  mechanism by which the architecture learns to handle this
+  integration over time, modifying it as experience accumulates
+  (Q-T006-P from item 2's triage names this as a real question
+  for mathematics mode).
+
+The architecture's **action repertoire** (Q-T006-O from item 2),
+**reference-frame construction process** (item 3), and other
+candidate scopes for meta-learning are **deferred to construction
+work**. Item 4 does not commit to meta-learning over these scopes
+at the property-statement level. The deferral is honest about
+state: the information needed to commit is not yet available;
+testing different structures and benchmarking topologies in
+Phase C will reveal what the architecture actually meta-learns
+over.
+
+**The recursion relationship (Prompt 2 — Reading C).**
+**Meta-learning IS what the recursion produces.** No separate
+meta-learning mechanism. What we call meta-learning is what
+level N+1 does relative to level N's learning. The recursion's
+directionality from item 3 (Reconciliation B — frames at level N
+enable learning at level N+1) extends naturally: level N+1's
+learning *about* level N's learning IS meta-learning. Self-similar
+all the way up — level N+2 meta-learns over level N+1's
+meta-learning. Meta-learning is just learning, viewed across the
+recursion.
+
+This is the strongest possible parsimony with what items 3 + 10
+already commit to: item 3 settled that frames ARE topologies (one
+architectural element, two perspectives); item 10 settled that
+the pattern recurs at every level; item 4 Prompt 2 settles that
+meta-learning is the across-level perspective on the same
+recursion. Three perspective-claims that together produce a
+substantively unified architecture: one substrate, one recursion,
+multiple perspectives at multiple levels.
+
+**Relationship to RSIC (Prompt 3 — Reading Z): the
+parameter/mechanism distinction is perspective-artifact, not
+substrate.** OBS-004 §2.7 was explicit that *"parameter-only
+modification within fixed mechanisms (the RSIC scope) is not
+sufficient."* Item 4 commits to a stronger position: the
+distinction between **parameter** and **mechanism** that RSIC
+operates within is itself **perspective-bound**, not
+architecturally real.
+
+What's a "parameter" at one level of the recursion is what gets
+learned about at the next level above it; what's a "mechanism" at
+one level is what produces learning at the next level below it.
+The architecture has just one kind of thing — the recursive
+pattern — and calling some of it "parameters" and some of it
+"mechanisms" depends on which level of the recursion you're
+looking from.
+
+This is consistent with item 3's Reading 1 (frames ARE topologies
+— one architectural element, two perspectives) extended further:
+**parameters AND mechanisms are also one architectural element
+with two perspectives.**
+
+**The vocabulary distinction made architectural.** OBS-004 had
+specifically warned against vocabulary drift: "recursive
+self-improvement" in this vault must be understood as a target
+capability of the entity being designed, NOT as MDEMG's RSIC.
+Item 4's Reading Z does this work clearly. The program's
+recursive self-improvement is **not** RSIC plus more (Reading Y),
+nor is it RSIC negated (Reading X). It **supersedes** the
+parameter/mechanism distinction RSIC operates within. The
+program's recursive self-improvement is fundamentally different
+from RSIC's at the substrate level — not because RSIC's
+parameter-tuning is *insufficient*, but because the
+parameter/mechanism distinction RSIC requires is itself
+perspective-bound.
+
+**Mechanism: emergence (Prompt 4 — Reading 3).** Meta-learning
+is not a new mechanism. It IS the across-level perspective on
+item 10's recursion. Higher-level topologies grow on lower-level
+topology outputs (which IS the recursion); calling this
+"meta-learning" is a perspective name, not a separate phenomenon.
+Emergence happens because the recursion is what produces all
+hierarchy of learning.
+
+This forecloses Reading 2 (meta-learning has its own mechanism,
+distinct from learning) — which was inconsistent with both Reading
+C from Prompt 2 and Reading Z from Prompt 3. Reading 1 (meta-
+learning emerges from the same growth dynamics applied to
+different content) is functionally equivalent to Reading 3 under
+the current settlements; Reading 3's framing was chosen because
+it foregrounds the recursion-as-substrate language already
+established in Prompts 2 and 3.
+
+**BNN as meta-learning evidence (Prompt 5 — B-medium).** D-012
+commits the program to studying the BNN as evidence about the
+framework. The BNN does meta-learning in specific
+neuroscientifically-documented ways: synaptic consolidation
+during sleep, neuromodulator-driven learning-rate modulation,
+structural plasticity at appropriate scales, sleep-replay-driven
+rule refinement.
+
+Item 4 commits to **B-medium**: the architecture takes structural
+cues from BNN meta-learning where the BNN evidence suggests
+something is **necessary** for meta-learning to work, but the
+architecture is **not bound to specific biological mechanisms**.
+If sleep-replay turns out to be necessary in some functional
+sense, the architecture has an analog; if it's a
+biological-constraint artifact (e.g., needed because biological
+neurons cannot consolidate while active), the architecture
+doesn't need it.
+
+This matches D-012 Component 2's R-evidence reading directly: BNN
+provides substantial structural evidence; ANN instantiation may
+depart where biology is constraint-artifact rather than
+framework-evidence.
+
+**Frozen learning rules (any architecture whose learning
+mechanism cannot be modified after construction), parameter-only
+modification (the RSIC scope), and any architecture that treats
+the parameter/mechanism distinction as architectural rather than
+perspective-bound** do not satisfy this commitment.
+
+**What it is not (Roger's contrast).** During item 4's sharpening,
+@reh3376 was explicit: meta-learning in this architecture is **not
+what LLM-with-harness systems do**, where the "meta" is in the
+harness scaffolding rather than the substrate. The architecture's
+meta-learning happens *at the substrate level*, in the framework's
+own growth and probabilistic infrastructure. The contrast against
+current state-of-the-art is part of what item 4 commits to *by
+exclusion*.
+
+**Cross-cutting interaction with item 10.** Item 4 is essentially
+the meta-learning-perspective on item 10's recursion. The two are
+inseparable: item 10 says the pattern recurs at every level; item
+4 Prompt 2 says meta-learning IS what the recursion produces. The
+architecture's pattern-at-every-level structurally IS its
+meta-learning capability.
+
+**Commitment strength: working commitment, revisable as data
+accumulates.** @reh3376's framing during item 4 sharpening:
+*"It is more of an intuitive 'guess' than a full commitment at
+this point, but that is the reason we are building this. We want
+to research the path to AGI... The data will drive direction, we
+will act on it as it is gathered and analyzed."* Item 4's
+commitments are property-statement-level commitments held for
+working purposes; R&D cycles will test, refine, or revise as
+evidence accumulates. Same epistemic structure as Q-014 (C-leading
+for first-problem candidate) and Q-011 (strong-prior research
+hypothesis), now applied at the must-have level.
+
+**Open within item 4 — to be sharpened as the architecture is
+built:**
+
+- **Q-T006-U (new):** What is meta-learned over the architecture's
+  action repertoire? Reading III from Prompt 1 was deferred —
+  whether action vocabulary is itself something the architecture
+  meta-learns is empirical work, tightly coupled to Q-T006-O
+  (action repertoire learned or fixed) from item 2.
+- **Q-T006-V (new):** What is meta-learned over the
+  reference-frame construction process? Reading V from Prompt 1
+  was deferred — whether the architecture meta-learns *how*
+  frames are constructed (when to merge, when to partition, what
+  triggers a new frame) is empirical work, tightly coupled to
+  item 3 and to Q-T006-Q (cross-frame co-activation mechanism).
+- **The mathematics of recursion-as-meta-learning** is not yet
+  specified. Q-T006-S/T (D-012's mathematics-mode questions)
+  cover the broader mathematical machinery; item 4 contributes a
+  specific case: the formal treatment of
+  meta-learning-as-recursion-perspective. T006 mathematics-mode
+  work.
+
+### Items 5-9 — Pending triage
+
+Items 5-9 below remain placeholders awaiting triage. Each will
+move through the same workflow items 1, 2, 3, 4, and 10 have
+done: Roger sharpens; Claude pushes back; the item gets revised,
 absorbed, dropped, split, or deferred; the result is committed.
 Triage proceeds one item at a time.
-
-The remaining from OBS-004 §2.7:
-
-4. **Meta-learning / mechanism modification.** The substrate
-   must let the system modify its own learning rules over time.
-   Parameter-only modification within fixed mechanisms (the
-   RSIC scope) is not sufficient.
 
 The five from T004 (Q-005 through Q-009):
 
