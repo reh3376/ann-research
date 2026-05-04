@@ -219,6 +219,161 @@ there is only the work of articulating what the new system must be.
 
 ## Log
 
+### 2026-04-30 — Foundational-assumptions exercise: D-012 committed + Q-013 + Q-014 filed
+
+**Stepped out of item 4's per-prompt triage** mid-Prompt-1 when @reh3376
+recognized that unstated core assumptions had been doing real work in
+prior triage conversations. Surfacing them now — *before* continuing
+items 4-9 triage — produces foundational artifacts that subsequent
+work can rely on without re-derivation.
+
+**The exercise produced one consolidated decision artifact (D-012)
+plus two related Q-artifacts (Q-013, Q-014).** What started as four
+candidate foundational assumptions consolidated to one (per @reh3376's
+"Meaning 1" — A and B are components of the original Assumption 1, not
+separate assumptions) plus two open questions (NP-completeness
+prerequisites, 3-D Tetris first-problem hypothesis).
+
+**D-012 settled commitments:**
+
+- **Foundational assumption (one consolidated claim):** there exists a
+  unifying architectural framework that produces all knowledge
+  sufficient for general intelligence; the BNN is evidence of the
+  framework but is not the framework itself; emulation of the BNN's
+  evident structure plus Bayesian reasoning broadly plus advanced
+  mathematics is the methodological key
+- **Reading β confirmed** (architectural form, not algorithm form) —
+  the framework IS the architecture; the architecture's growth IS the
+  framework's operation
+- **Loose universality** — "all knowledge sufficient for general
+  intelligence" not strict every-kind-of-knowledge-without-gaps
+- **Domingos lineage credited** with explicit reframing —
+  architectural-framework + BNN-as-evidence is the program's
+  contribution
+- **Bayes broad** (B-broad reading) — Bayesian reasoning broadly
+  including active inference, predictive coding, FEP, hierarchical
+  Bayesian models; not literal Bayes Theorem alone
+- **R-evidence reading** for "represented in the BNN" — BNN provides
+  substantial structural evidence about the framework but is not a
+  literal implementation target; methodologically commits the program
+  to studying neuroscience as primary source for architectural insight
+  WITHOUT committing to neuromorphic implementation
+- **AGI as destination** (Z-loose reading on reflection) — ASI is in
+  @reh3376's long-term vision but does NOT enter the vault at this
+  stage; @reh3376's framing: *"Targeting ASI before we even know if
+  AGI is possible with this framework seems a little too ambitious to
+  me. ASI is part of the long-term 'vision', but it's not practical
+  to explicitly call it out in our current research path."*
+
+**Q-013 settled framing:**
+
+- **Computational complexity prerequisites for the architecture's
+  first applied problem** — reframed from original "initial state"
+  language to "first applied problem" after @reh3376's Phase 0 vs
+  Phase 1 clarification
+- **Three sub-readings held open** (Option α confirmed) — R1
+  (bootstrap problem), R2 (foundational primitive), R3 (theoretical
+  precondition); commitment deferred until Phase C construction
+  work or T006 mathematics mode surfaces resolution
+- **Not a P=NP claim** — explicitly scoped to the first applied
+  problem the architecture encounters, not arbitrary NP-completeness
+
+**Q-014 settled framing:**
+
+- **3-D Tetris as candidate first applied problem** with M-1
+  conjunctive structure (Readings X spatial, Y computational pressure,
+  Z pedagogical curriculum start all co-justify)
+- **Sense 1 hypothesis framing** (whole-claim hypothesis, Q-011
+  precedent) — falsifiable as a unit; if Tetris turns out to be right
+  for different reasons, the hypothesis as filed gets revised
+- **C-leading commitment strength** (fourth category beyond
+  C-strong/C-weak/C-deferred) — Tetris is the working leading
+  candidate based on @reh3376's current knowledge; commitment is
+  revisable upon presentation of a better candidate; absent revision,
+  Tetris is what the program proceeds with
+- **G-clean phase boundary** — Phase 0 (substrate initialization)
+  completes discretely before Phase 1 (first applied problem) begins
+- **Discoverability mechanism** — Q-artifact explicitly invites
+  alternative candidate proposals; broad tags for future searches
+
+**Methodological observations from this exercise:**
+
+- **The work-method's discipline functioned correctly.** When
+  @reh3376 wrote *"You decide on the rest based on your context and
+  understanding of our goals"*, Claude pushed back rather than
+  accepting the delegation; @reh3376 then provided clean answers
+  that included one substantive correction (the AGI/ASI walk-back).
+  The pushback prevented Claude's inferences from standing in for
+  @reh3376's commitments. @reh3376's response: *"I see, you are
+  correct to do so here."*
+- **"Start simple, build as we go" is now a recurring methodological
+  pattern** — fourth instance: looser logical grounding (PR #13's
+  gate criteria), accumulate-then-draft (item 3), property statements
+  that defer specification to construction (items 1-3),
+  hypothesis-with-revision-condition (Q-014). May deserve to be
+  named as an explicit methodological commitment somewhere.
+- **The labeling correction** ("B was not correctly stated... C should
+  be assumption B") and the **AGI/ASI walk-back** ("Targeting ASI
+  before we even know if AGI is possible... seems too ambitious")
+  are both instances of the working method functioning correctly:
+  Claude's pushback surfaced implications @reh3376 hadn't fully
+  tracked; @reh3376 refined commitments in response. Worth noting
+  that as foundational work accumulates, some earlier decisions
+  (items 1-3, 10) may benefit from a second look against the
+  foundational assumption now committed; flagging only, not
+  proposing action.
+
+**New questions surfaced as deferred (in thread log, not filed as
+Q-artifacts unless promoted):**
+
+- **Q-T006-S (new):** What mathematical machinery beyond active-
+  inference / FEP / hierarchical-Bayesian literature is required
+  for full specification of the framework? Existing surfaced
+  specifics: N-level recursion mathematics (item 10), α+β
+  integration coherence (Q-T006-P), EX-3 expansion mathematics
+  (item 3). T006 mathematics-mode work.
+- **Q-T006-T (new):** What is the full extent of "advanced
+  mathematics" Component 3 of D-012 commits the program to?
+  Phrase intentionally loose; sharpening as work proceeds.
+
+**D-009 verification:** D-009 already names AGI as destination
+throughout; no ASI drift; no revision needed in this PR.
+
+**Resolved during this exercise (now closed; not filed as separate
+Q-artifacts since they were sharpening prompts within the
+conversation):**
+
+- α/β/γ for Core Algorithm reading: β confirmed
+- A+B+C inventory question: A and B are components of one
+  consolidated assumption (Meaning 1); C absorbed into D-012
+  (methodological commitment about how A and B combine is implicit
+  in D-012's structure)
+- B-strict / B-broad for Bayes: B-broad confirmed
+- R-realization / R-evidence / R-clue for "represented in":
+  R-evidence confirmed
+- X-explicit / Y-emergent / Z-loose for AGI/ASI: Z-loose confirmed
+  on reflection (after initial X/W reading was walked back)
+- M-1 / M-2 / M-3 for Tetris reasons: M-1 conjunctive confirmed
+- H-design / H-state for "hard to commit to one": H-design
+  confirmed
+- Sense 1 / Sense 2 for hypothesis framing: Sense 1 confirmed
+- C-strong / C-weak / C-leading / C-deferred for commitment
+  strength: C-leading (a fourth category) confirmed
+- G-clean / G-graded for phase boundary: G-clean confirmed
+- Reading 1 / Reading 2 / Reading 3 / hold-open for Q-013
+  sub-readings: hold-all-open confirmed
+- Path 1 (incremental PRs) / Path 2 (batch PR): Path 2 confirmed
+- Option α (file as Q) / Option β (deliberate exclusion in D-NNN)
+  / Option γ (sharpen and include in D-NNN) for NP-completeness
+  handling: Option α confirmed
+
+**Item 4 triage:** still paused mid-Prompt-1. Resumes after this
+PR merges. The foundational assumption (D-012) is now available
+as inheritance for item 4's continued work; specifically, item
+4's "what gets modified by meta-learning" question can now reference
+the unifying-framework framing rather than working from items 1-3,
+10 alone.
+
 ### 2026-04-30 — Cycle 1 triage continued: item 3 sharpened (5-prompt deliberate methodology)
 
 **Item 3 sharpened from "Reference-frame construction" placeholder
