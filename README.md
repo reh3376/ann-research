@@ -1,5 +1,7 @@
 # ann-research
 
+*Last updated: 2026-04-30*
+
 Working substrate of a research program toward an artificial neural
 network architecture for general intelligence.
 
@@ -47,6 +49,14 @@ there is no public artifact yet, the work is still in progress.
 
 ## What the program is working toward
 
+This program is an active research effort, not a finished theory. The
+substrate-level commitments below are working positions held with
+substantial confidence; the open questions further down are exactly
+that — open. We surface both because honest disclosure is what
+attracts the collaborators we hope to work with.
+
+### Sharpened substrate-level commitments
+
 The architecture this program is building must satisfy a set of
 substrate-level commitments that current architectures do not supply.
 These are accumulated and sharpened in the architectural-innovation
@@ -64,22 +74,137 @@ include:
   has precise meaning) AND forward-simulating (generates trajectories);
   predictions are action-conditioned, so the architecture is agentive,
   not a passive observer
+- **Reference-frame construction** — reference frames are the
+  foundation that learning is built upon; they emerge from co-activation
+  patterns rather than explicit container machinery; they are
+  domain-neutral as architectural primitives, with type acquired from
+  inputs; they are identical with topologies (one architectural element,
+  two perspectives — computational dynamics and representational role)
+- **Meta-learning / mechanism modification** — meta-learning IS what
+  the recursion produces (no separate mechanism); the parameter /
+  mechanism distinction is perspective-artifact rather than substrate;
+  the architecture's recursive self-improvement supersedes the
+  parameter-tuning scope of conventional self-improvement frameworks
 - **Recursive composability** — the architectural pattern recurs at
   every level of nested composition; topologies compose with topologies
   via inter-topology wiring; the architecture is self-similar in the
   strict sense
 
-Additional substrate commitments — reference-frame construction,
-meta-learning at the rule level, homeostatic boundary, and others —
-are in active sharpening. Each is recorded in the vault as it
-stabilizes.
+Together, items 3 (reference-frame construction), 4 (meta-learning),
+and 10 (recursive composability) compose into a unified self-similarity
+claim: the architecture has one substrate, one recursion, and multiple
+perspectives at multiple levels — what we call "frames" vs "topologies",
+"learning" vs "meta-learning", "parameters" vs "mechanisms" are
+perspective views of the same underlying recursive pattern.
 
-The program's working definition of general intelligence — *the
-property that enables reliable prediction across heterogeneous
-prediction domains* — is held as an open question
-(`Q-2026-04-30-012`) pending refinement; the seed answer informs the
-work now and may graduate to a committed definition as the program
-matures.
+Additional substrate commitments — homeostatic boundary,
+projection-and-anchoring, recursive predictive horizon, prime
+directives — are in active sharpening. Each is recorded in the vault
+as it stabilizes.
+
+### Foundational assumption
+
+The program operates under a foundational assumption
+(`D-2026-04-30-012`) that conceptually underlies all the substrate-
+level commitments above. The assumption decomposes into three
+internally-coherent claims, held together as one foundational
+position:
+
+**Existence.** There exists a fundamental architectural framework
+that produces all knowledge sufficient for general intelligence. The
+framework is *abstract* — not the human brain, not any particular
+artificial neural network, but a structural pattern that admits
+multiple instantiations. This is a Domingos-credited claim — Pedro
+Domingos's *The Master Algorithm* (2015) is the lineage — but
+reframed: the program commits to a single architectural framework
+rather than a single executable algorithm.
+
+**Instantiation.** The framework is *represented in* the human
+biological neural network as **evidence** — not as the framework
+itself. The BNN provides substantial structural evidence about the
+framework (cortical-column uniformity, hierarchical organization
+with bidirectional connections, predictive-coding dynamics,
+reference-frame construction via grid cells and place cells), but
+biological constraints (input types, energy budget, compute
+limits) may obscure parts of the framework not visible in the BNN.
+The architecture is not committed to neuromorphic implementation.
+
+**Methodology of discovery.** The key to unlocking the framework's
+full potential in artificial neural networks is emulating the BNN's
+evident structure, using Bayesian reasoning broadly (probabilistic
+inference including active inference, predictive coding, the
+free-energy principle, and hierarchical Bayesian models — not
+literal Bayes Theorem alone) and advanced mathematics. Some of the
+mathematics required already exists; some of it does not, and the
+program may need to develop it.
+
+The program's destination is **AGI** (artificial general
+intelligence). Whether the unconstrained framework's potential
+extends beyond human-level intelligence is a question for after
+AGI is demonstrated; this is not part of the program's stated
+commitment at this stage.
+
+### Open questions
+
+These are the questions held open in the vault. Each represents
+work the program does not yet know how to do, and where thoughtful
+collaboration would directly advance the work:
+
+- **`Q-2026-04-30-012` — Working definition of general
+  intelligence.** Seed answer: *the property that enables reliable
+  prediction across heterogeneous prediction domains*. Three
+  sub-questions held open: what counts as a "prediction domain";
+  what counts as "reliable" prediction; whether intelligence is
+  the *enabling property* of reliable prediction or *constitutive
+  of* it.
+- **`Q-2026-04-28-011` — Knowledge → skills via nesting.** Strong-
+  prior research hypothesis: skills are hypothesized to emerge as
+  meta-frames over knowledge frames as the architecture's recursion
+  deepens. Held with strong prior confidence; awaiting evidence
+  from R&D cycles.
+- **`Q-2026-04-30-013` — Computational complexity prerequisites
+  for the architecture's first applied problem.** Three
+  sub-readings (bootstrap problem; foundational primitive;
+  theoretical precondition) all held open. Becomes load-bearing
+  when Phase C construction begins.
+- **`Q-2026-04-30-014` — 3-D Tetris as candidate first applied
+  problem.** Working leading candidate based on conjunction of
+  three reasons (spatial reasoning bootstrap; computational
+  pressure from NP-completeness; pedagogical curriculum starting
+  point). Held with explicit revision conditions — a better
+  candidate would replace it.
+- **Substrate-level commitments 5-9** — pending triage:
+  homeostatic boundary, dimensional minimum-commitment (tentatively
+  absorbed into commitment 1), projection-and-anchoring, recursive
+  predictive horizon, prime directives. Each will be sharpened
+  through the same workflow already applied to commitments 1-4 and
+  10.
+
+### Research hypotheses and how we hold them
+
+Several claims in the vault are filed as **strong-prior research
+hypotheses** — held with substantial conviction based on current
+reasoning, but explicitly awaiting evidence from construction work
+to be supported, refined, or revised. Q-2026-04-28-011 (knowledge →
+skills via nesting) and Q-2026-04-30-014 (3-D Tetris first-problem
+candidate) are the program's first two such hypotheses; they
+establish a working pattern.
+
+The pattern matters because it lets the program be honest about
+what's commitment vs. what's hypothesis. Substrate-level commitments
+go into property statements with the discipline of "no claim
+without grounding." Strong-prior hypotheses go into Q-artifacts
+with explicit prior-confidence framing and explicit revision
+conditions — a falsifying piece of evidence, an alternative
+candidate, a better articulation. Both inform the program's work;
+neither is treated as the other.
+
+This is unusual epistemic infrastructure. We use it because the
+distinction matters — for our own thinking, for honest external
+communication, and for collaborators who deserve to know exactly
+what we're sure about and what we're betting on.
+
+### Inheritance from prior work
 
 The architecture inherits from work already in the field:
 
@@ -209,6 +334,7 @@ T{NNN}-{slug}/thread.md
 Examples:
 
 - `OBS-2026-04-28-003-mdemg-subsystem-orientation-map.md`
+- `D-2026-04-30-012-foundational-assumption-unifying-architectural-framework.md`
 - `Q-2026-04-30-012-working-definition-of-general-intelligence.md`
 - `T006-architectural-innovation/thread.md`
 
