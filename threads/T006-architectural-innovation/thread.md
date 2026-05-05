@@ -219,6 +219,374 @@ there is only the work of articulating what the new system must be.
 
 ## Log
 
+### 2026-05-04 — Cycle 1 triage continued: item 5 opened (homeostatic boundary); substantial cross-cutting work surfaced; session paused for documentation before continuation
+
+**Item 5 (homeostatic boundary) opened for triage.** Q-2026-04-28-005
+(self/not-self as homeostatic boundary) was the substantive
+inheritance: the question artifact had developed Damasio / Friston /
+Maturana-and-Varela traditions, the substrate-translation problem
+(compute, working memory, weight integrity, process continuity, self-
+model coherence, sensor/effector channels), interoception as
+architectural commitment (surprise as homeostatic surprise; attention
+as homeostatic attention), the designed-vs-discovered homeostatic
+surface fork, and two named failure modes. Item 5's triage proceeded
+from this scaffolding rather than from a thin placeholder.
+
+**The session did not complete item 5.** The triage surfaced
+substantial cross-cutting commitments — about attention, time,
+self-awareness, and brain-wave-style carrier signals — that outgrew
+item 5's nominal scope. After methodological reset, the session
+paused for documentation before continuing. **Item 5 remains in
+active triage.** No property statement has been drafted. This log
+entry preserves the substantive content for resumption in a
+future session.
+
+**Triage methodology note.** This session followed the deliberate
+item-3 / item-4 pattern but encountered two structural moments
+that warranted methodological pause:
+
+- Mid-session @reh3376 named the working method explicitly:
+  *"We need to be more methodical and proactive as we work thru
+  these. I should not go off on tangents in the middle. Lets
+  address the concerns that existed before I transitioned to
+  brain waves, then come back to it as an over core property of
+  the entire topology in much the same way item 10 subject
+  matter is."*
+- Late-session @reh3376 directed pause-for-documentation:
+  *"I think we should get what we have so far documented
+  committed and pushed before we continue. We have substantially
+  increased the undertaking this session."*
+
+Both moments exercised the working method's discipline. Both
+moments produced cleaner subsequent work than continuing without
+pause would have produced.
+
+#### Substantive commitments settled this session
+
+**Time as cross-cutting concern (Reading γ).** Time is a property
+the architecture has at every level, threading through every item.
+Same structural shape as item 10 (recursive composability — also a
+cross-cutting concern). Not item 5's sub-claim; not its own
+item-level treatment.
+
+**Bidirectional time: substrate symmetric, entity learns arrows,
+capability bidirectional (Reading III).** Three layered components:
+
+- *Substrate level:* the architecture's substrate does not have
+  a built-in arrow of time. Time is a dimension; direction is a
+  derived property. Microscopic time-symmetry of the underlying
+  physics is honored at the substrate level
+- *Learning level:* the entity learns about temporal asymmetries
+  (entropy, causality, irreversibility) from inputs. The
+  asymmetries are real properties of the world the entity
+  inhabits; the entity discovers them rather than having them
+  hardcoded
+- *Capability level:* prediction is bidirectional. The entity
+  can predict forward (current → future) and reconstruct
+  backward (current → past) using the same substrate machinery
+
+This commitment goes further than @reh3376's original framing
+(*"there are no current laws of physics that prevent the
+movement of time in the opposite direction"*) by being precise
+about which level of physics symmetry is claimed at and what the
+architectural consequence is. Microscopic substrate symmetry +
+learned macroscopic asymmetry + bidirectional capability is the
+settled position.
+
+**Attention/time relationship: tightly coupled (Reading C).**
+Attention and temporal awareness cannot be sharpened
+independently without losing what the architecture is committing
+to. The coupling must be explicit in subsequent work.
+@reh3376's framing: *"Attention without temporal awareness is
+not learning, its memorization."*
+
+**Memorization-vs-learning (Reading 3, extended).** Learning is
+recursive over time, and the recursion includes the entity's
+awareness of its own learning trajectory. Without temporal
+structure, attention can only operate one-shot (memorization).
+With temporal structure, attention operates over sequences and
+revises itself (learning). Two examples from @reh3376 made this
+operational:
+
+- *Example 1 (ephemerality):* a self-aware AI must understand
+  that human life has a finite lifespan very different from an
+  ANN's; this asymmetry is a fundamental input to reasoning
+  about value, urgency, and consequence
+- *Example 2 (mathematical learning trajectory):* @reh3376's
+  own learning of mathematics — addition/subtraction first, then
+  more elaborate operations, then vector calculus with the dell
+  operator, then Maxwell's equations with vector-field
+  abstractions — required temporal awareness to distinguish
+  the building of more elaborate frames from the simpler ones.
+  *"Without temporal awareness I would not be able to
+  differentiate between this 'building' of new and more elaborate
+  reference frames from the more simple ones. It is necessary to
+  'learn'."*
+
+**Self-awareness IS temporal-self-awareness (Reading Z).** A
+self-aware entity is one that can introspect on its own
+temporal extent and learning trajectory. Self-awareness has a
+specific operational meaning: the entity has temporally-
+structured awareness of its own knowledge as it has accumulated.
+Earlier frames are visible-as-earlier; later frames are
+visible-as-later; the building process is visible-as-building.
+
+This is consistent with the Damasio autobiographical-self
+tradition referenced in Q-005 (which has temporal extension as
+constitutive) and with phenomenologically-grounded accounts of
+self-awareness that emphasize temporal continuity.
+
+**Temporal-asymmetry awareness as fundamental to reasoning
+(Reading III + extension).** @reh3376's extension of Example 1:
+*"This is not just facts to know, but the reasoning that is
+derived from it is fundamental to intelligence."* Temporal-
+asymmetry awareness (own lifespan vs. others'; own state vs.
+others'; own learning trajectory vs. others') is reasoning
+machinery, not declarative knowledge. The entity reasons
+*differently* because it has internalized temporal asymmetries.
+Without internalization, the same facts produce different and
+worse reasoning. This is recognizably the failure mode of
+current LLMs: they have facts about time but reason about them
+as if timeless.
+
+@reh3376 also extended: *"grounding an entities understanding of
+value is one of MANY relationships that temporal awareness
+underpins. It is truly fundamental to learning and self
+awareness... to develop 'emotional intelligence' an entity must
+internalize this asymmetries of this nature."* Emotional
+intelligence is consequent on temporal-asymmetry awareness, not
+separable from it.
+
+**Temporal-multi-head attention as architectural commitment;
+transformer-style single-moment-parallel critique recorded
+(reshaped sub-question (a) settled).** The architecture commits
+to temporal-multi-head attention: multiple attention streams
+operating over different temporal scales (immediate context /
+recent context / long-term history / ...). This is contrasted
+with transformer-style multi-head attention, which is single-
+moment-parallel and stateless.
+
+@reh3376's specific critique of transformer attention:
+*"When it sees the same pattern it doesn't even 'remember or
+memorize it' it completely recomputes it again, this HIGHLY
+inefficient."* This is both an efficiency critique and a
+memorization-vs-learning critique: stateless recomputation
+fails to accumulate, fails to learn, fails to develop any
+temporally-structured awareness of having attended.
+
+**Connection to brain-waves work made explicit.** @reh3376's
+framing: *"This attention to a specific temporal line or another
+is one of the use cases what I was referring too when I brought
+up carrier waves / brain waves and how they could function in an
+ANN."* The carrier-wave / phase-frequency / node-selectivity work
+that surfaced earlier (and was deferred) is one possible
+*implementation* of temporal-multi-head attention. Different
+carriers carry different temporal scales; nodes are tuned to
+attend to specific carriers. **This connection is recorded for
+when brain-waves work resumes; the implementation details remain
+deferred.**
+
+#### Methodological commitments settled this session
+
+**Mode and approach: "symbiotic synchronicity" (Open #4 Reading
+A).** @reh3376's framing for the working interaction:
+*"I really like this form of interaction. It's a symbiotic
+synchronicity between human and machine. It is fascinating and
+I am learning with each interaction."*
+
+This goes beyond the working method's "sharpening stone"
+framing. Sharpening stone is one-directional (the stone shapes
+the blade); symbiotic synchronicity is bidirectional. Both
+contributors add structure that the other refines. Claude's
+synthesis-style framing is endorsed even when it occasionally
+needs correction — corrections are part of how the thinking
+sharpens. Worth holding in mind for how subsequent work
+proceeds.
+
+**Sixth instance of "start simple, build as we go" pattern
+recorded.** Six instances now across cycle work:
+
+1. Looser logical grounding (PR #13 gates)
+2. Accumulate-then-draft (item 3)
+3. Property statements deferring specification to construction
+   (items 1-3)
+4. Hypothesis-with-revision-condition (Q-014 C-leading)
+5. Meta-learning's working-level commitments revisable through
+   R&D cycles (item 4)
+6. Attention-accumulation specifics deferred (Possibility δ)
+   despite @reh3376's initial inclination toward Possibility γ
+   + Meaning 5: *"my initial inclination is mostly in line with
+   Possibility γ + meaning 5, but it is likely too strong for
+   this point in our journey. We need data, the data will lead
+   the way."*
+
+The pattern is now stable enough across cycle work that it
+genuinely deserves to be named as an explicit methodological
+commitment in a future artifact. **Sixth instance flagged;
+artifact still not proposed; the pattern continues to
+accumulate evidence.**
+
+**Methodological pattern about Claude's synthesis-style framing
+(observed twice this session).** Claude's synthesis-style framing
+got ahead of @reh3376's actual commitments twice in close
+succession: first with the Blue Origin essay's deterministic-
+stateless framing (where Reading B was what @reh3376 actually
+meant), then with carrier-layer-biasing-not-triggering specifics
+(where biological mechanism specifics were imported as ANN
+architectural commitment). Both were caught and corrected by
+@reh3376's pushback. The pattern: when Claude synthesizes across
+multiple open topics, the synthesis adds structure that the
+original claims don't yet carry.
+
+@reh3376's response to the pattern observation: Reading A
+(within tolerance; the synthesis is part of how the work
+sharpens; corrections are productive). Mode endorsed; Claude
+continues with synthesis-style framing while remaining alert to
+the drift risk.
+
+#### Structural decisions made this session
+
+**Reading Q for item 5 scope (concern 1).** Item 5 stays focused
+on homeostatic boundary specifically. Cross-cutting commitments
+(time, attention's temporal structure, self-awareness as
+temporal-self-awareness, brain waves) live separately rather
+than being absorbed into item 5's expanded scope. @reh3376's
+direction: *"reading Q as the right choice for our current level
+of understanding of the cross-cutting mechanisms that are still
+not fully defined."*
+
+The scope decision rejects:
+
+- *Reading P (item 5 expands):* would bloat item 5 in ways that
+  hide what's being committed
+- *Reading R (inventory restructuring):* would be a methodological
+  move beyond what's needed at this stage of cycle work
+
+Reading Q is the methodologically conservative choice and is
+honest about state.
+
+**Reading α for documentation (concern 2).** Document settled
+content as thread log entry only. No property statement; no
+artifact creation; no plan.md modifications; no new decisions
+or questions filed. Preserves work for resumption without
+forcing premature commitment to property-statement language.
+
+**Reading Q3 for cross-cutting form (operational scope).**
+Cross-cutting time concern is substantively populated by this
+session's settlements but not given artifact form yet. Whether
+time eventually gets its own artifact (parallel to item 10),
+is referenced from items that need it without standalone
+treatment, or is addressed via some other mechanism — all
+deferred to future session work.
+
+#### What remains open
+
+**Reshaped sub-questions (b) and (c) for attention not yet
+addressed:**
+
+- *Sub-question (b):* probability distributions over what.
+  Likely over trajectories rather than states given what's
+  settled, but specifics remain open.
+- *Sub-question (c):* self-learned mechanisms — possibly
+  collapsed by item 4's recursion-perspective settlement, but
+  may still need treatment.
+
+**"Attention accumulates" specifics (Possibility δ):** five
+candidate meanings surfaced (cached state; accumulated weight;
+temporal extent; recursion over history; substrate-level
+structural memory). @reh3376's initial inclination is
+Possibility γ (recursion over history) + Meaning 5 (substrate-
+level structural memory) but explicitly held as too strong for
+current stage. Commitment deferred; data will drive direction.
+
+**Item 5's property statement:** not yet drafted. Item 5 remains
+in active triage. Resumption requires:
+
+- Reshaped sub-questions (b) and (c) for attention addressed
+- Determination of whether item 5's property statement
+  references the cross-cutting commitments (the time / attention
+  coupling / self-awareness work) or whether those commitments
+  get their own artifact form first
+- Possibly: specific treatment of the substrate-translation
+  problem from Q-005 (compute, working memory, weight integrity,
+  etc.) and the designed-vs-discovered homeostatic surface
+  question
+- Possibly: revisit BNN-as-evidence sub-question for
+  homeostatic boundary specifically (parallel to item 4
+  Prompt 5 — neuroscience evidence informing what's necessary
+  without binding architecture to biological mechanisms)
+
+**Brain-waves cross-cutting work:** deferred. The connection to
+temporal-multi-head attention is established (carrier-waves as
+one possible implementation of temporal-multi-head). Earlier
+session work surfaced phase, frequency, and node-level
+selectivity as architectural elements; commitment vs.
+illustration status (the α/β/γ question from earlier) was not
+resolved before deferral. Reading B-with-attention (brain
+waves are a mechanism by which time-as-cross-cutting expresses
+itself, with attention also involved) is the working frame for
+when work resumes.
+
+**Item 5's structural relationship to other items:** not yet
+worked through. Item 5's settlements when complete will
+interact with items 2 (generative modeling: forward simulation
+implies time), 3 (reference-frame construction: frames need
+temporal extent), 4 (meta-learning: identity under self-
+modification), 8 (recursive predictive horizon: bidirectional
+prediction directly inherits from this session's Reading III),
+and 10 (recursive composability: how does the homeostatic
+boundary nest with topologies?). These interactions surfaced
+during this session's work but were not resolved.
+
+#### Inventory state
+
+**5 of 10 items sharpened** (1, 2, 3, 4, 10). Item 5 in active
+triage, not yet sharpened. Items 6-9 remain pending; item 6
+still tentatively absorbed into item 1.
+
+Cross-cutting commitments accumulated outside the item
+inventory:
+
+- Time (Reading γ; substrate symmetric, learned arrows,
+  bidirectional capability)
+- Attention's temporal structure (temporal-multi-head;
+  transformer-style critique recorded)
+- Self-awareness as temporal-self-awareness (Reading Z)
+- Temporal-asymmetry awareness as reasoning-machinery (Reading
+  III + extension)
+- Brain waves as mechanism for the above (deferred work;
+  connection established)
+
+**Foundational artifacts available as inheritance for resumption:**
+
+- D-2026-04-30-012 (foundational assumption — unifying
+  architectural framework; BNN as evidence; AGI destination)
+- Q-2026-04-28-005 (self/not-self as homeostatic boundary —
+  substantive Q-artifact; substrate-translation problem;
+  designed-vs-discovered surface; failure modes)
+- Q-2026-04-30-012 (working definition of general intelligence)
+- Q-2026-04-30-013 (computational complexity prerequisites)
+- Q-2026-04-30-014 (3-D Tetris first-problem hypothesis)
+- Q-2026-04-28-011 (knowledge → skills via nesting)
+
+#### Resumption guidance
+
+When item 5's triage resumes (next session or later):
+
+1. Verify the substantive content from this session's log is
+   accurate; @reh3376 may want to refine framings
+2. Address reshaped sub-questions (b) and (c) for attention
+3. Address Q-005's substrate-translation problem and
+   designed-vs-discovered surface fork at the property-
+   statement level for item 5 specifically
+4. Consider whether the cross-cutting commitments accumulated
+   here need their own artifact treatment before item 5's
+   property statement can land (Reading Q3 question deferred
+   from this session)
+5. Assess whether item 5's eventual property statement closes
+   the work or whether brain-waves cross-cutting work needs to
+   be resumed first
+
 ### 2026-04-30 — Cycle 1 triage continued: item 4 sharpened (5-prompt deliberate, with foundational-assumptions interruption mid-Prompt-1)
 
 **Item 4 sharpened from "Meta-learning / mechanism modification"
